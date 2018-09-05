@@ -1,0 +1,48 @@
+.avatar {
+  display: block;
+  position: relative;  
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  
+  // Photo
+  
+  img {
+  	border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    top: 0;
+    left: 0;  
+  }
+ 
+  // Sizes
+  
+  &.lg {
+		width: 100px;
+    height: 100px;
+    
+    // = .md
+    @media (max-width: 767px) {
+	    .md();
+	    margin-left: -30px;
+    }
+  }
+    
+  &.md {
+		width: 60px;
+    height: 60px;
+    font-size: 2em;
+    line-height: 2.1em;
+  }
+  
+  &.sm {
+		width: 40px;
+    height: 40px;
+    font-size: 1em;
+    line-height: 2.8em;
+  }
+  
+}

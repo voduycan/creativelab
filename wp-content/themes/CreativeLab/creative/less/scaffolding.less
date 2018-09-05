@@ -1,0 +1,40 @@
+// Hide Scrollbar
+// --------------------------------------------------
+
+::-webkit-scrollbar { width: 0; display: none; }
+
+html { overflow: -moz-scrollbars-none; }
+
+// Body
+// --------------------------------------------------
+
+// Reset
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  color: white;
+  cursor: default;
+  
+  // Rendering text
+  text-rendering: optimizeLegibility; 
+  shape-rendering: geometricPrecision;
+  
+  .noselect(); // mouse wrap
+  
+  // Links
+	a {
+		text-decoration: none;
+	  color: white;
+	  cursor: pointer;
+	}
+	
+	p {
+		line-height: 1.5em;
+		letter-spacing: .5px;
+	}
+  
+}
