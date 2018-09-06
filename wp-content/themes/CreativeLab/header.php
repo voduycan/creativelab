@@ -12,7 +12,12 @@
  * @version 1.0
  */
 
-?><!DOCTYPE html>
+?>
+<?php
+// Start the session
+session_start();
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -51,17 +56,34 @@
 	<meta name="theme-color" content="#ffffff">
 </head>
 
+<?php 
+	$_SESSION['lang'] = ""; 
+
+	if($_GET['lang'] == 'en'){
+		$_SESSION['lang'] = ""; 
+	}
+
+	if($_GET['lang'] == 'jp'){
+		$_SESSION['lang'] = "_jp"; 
+	}
+
+?> 
+
 <body <?php body_class(); ?>>
 	<header>
 		<a href="http://www.creativelab.vn" class="nav-brand" title="Creative Lab"></a>
 		
 		<nav>
-			<a href="#section1">Intro</a>
-			<a href="#section2">Who Is Creative Lab</a>
-			<a href="#section3">Our Services</a>
-			<a href="#section4">Why Choose Us</a>
-			<a href="#section5">Featured Works</a>
-			<a class="md-trigger" data-modal="modal-contact">Contact</a>				
+			<a href="#section1"><?php the_field('intro'.$_SESSION['lang'], 'options'); ?></a>
+			<a href="#section2"><?php the_field('who_is'.$_SESSION['lang'], 'options'); ?></a>
+			<a href="#section3"><?php the_field('our_services'.$_SESSION['lang'], 'options'); ?></a>
+			<a href="#section4"><?php the_field('why_choose_us'.$_SESSION['lang'], 'options'); ?></a>
+			<a href="#section5"><?php the_field('featured_works'.$_SESSION['lang'], 'options'); ?></a>
+			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$_SESSION['lang'], 'options'); ?></a>
+			<div class="lang-div">
+				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en""></a>
+				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp""></a>
+			</div>
 		</nav>
 		
 		<a class="icon-menu"></a>

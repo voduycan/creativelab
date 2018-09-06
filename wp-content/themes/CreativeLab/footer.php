@@ -13,6 +13,9 @@
  */
 
 ?>
+<?php
+	session_start();
+?>
 
 		<footer>
 			
@@ -23,7 +26,7 @@
 			</ul>
 			 -->
 			
-			<p>@2017 Creative Lab Company Ltd. All rights reserved.</p>
+			<p><?php the_field('copy_right'.$_SESSION['lang'], 'options'); ?></p>
 		</footer>
 <?php wp_footer(); ?>
 
