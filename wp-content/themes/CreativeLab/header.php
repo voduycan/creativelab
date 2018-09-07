@@ -14,9 +14,20 @@
 
 ?>
 <?php
-// Start the session
-session_start();
-?>
+	// Start the session
+	session_start();
+ 
+	$_SESSION['lang'] = ""; 
+
+	if($_GET['lang'] == 'en'){
+		$_SESSION['lang'] = ""; 
+	}
+
+	if($_GET['lang'] == 'jp'){
+		$_SESSION['lang'] = "_jp"; 
+	}
+
+?> 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
@@ -31,6 +42,11 @@ session_start();
 	<?php wp_head(); ?>
 
 	<link href="<?php bloginfo('template_url'); ?>/creative/less/main.less" rel="stylesheet/less" type="text/css">
+	<?php if($_GET['lang'] == 'jp'): ?>
+		
+		<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url'); ?>/creative/less/jp-style.less">
+		
+	<?php endif; ?>
 	<script src="<?php bloginfo('template_url'); ?>/creative/js/less.js"></script>
 	<script>less.watch();</script>
 
@@ -54,20 +70,12 @@ session_start();
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/creative/images/ico/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+
+	
+
 </head>
 
-<?php 
-	$_SESSION['lang'] = ""; 
 
-	if($_GET['lang'] == 'en'){
-		$_SESSION['lang'] = ""; 
-	}
-
-	if($_GET['lang'] == 'jp'){
-		$_SESSION['lang'] = "_jp"; 
-	}
-
-?> 
 
 <body <?php body_class(); ?>>
 	<header>
@@ -81,8 +89,8 @@ session_start();
 			<a href="#section5"><?php the_field('featured_works'.$_SESSION['lang'], 'options'); ?></a>
 			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$_SESSION['lang'], 'options'); ?></a>
 			<div class="lang-div">
-				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en""><img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/england.jpg"></a>
-				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp""><img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/japan.jpg"></a>
+				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en""><span class="icon-america lang-font"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span></span></a>
+				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp""><span class="icon-japan lang-font"><span class="path1"></span><span class="path2"></span></span></a>
 			</div>
 		</nav>
 		

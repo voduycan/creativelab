@@ -16,8 +16,17 @@
 		<!-- Modal Contact -->
 		<div class="md-modal" id="modal-contact">
 			<div class="md-form">
-				
 				<!-- Account Form -->
+				<form id="contact">  
+					<fieldset>
+						<legend align="center"><?php the_field('title_p6', get_field('contact',$post->ID)); ?></legend>
+						<p><?php the_field('text_p6', get_field('contact',$post->ID)); ?></p>
+						<?php the_field('form', get_field('contact',$post->ID)); ?>  
+						<a class="button md-close" data-text="<?php the_field('close_p6', get_field('contact',$post->ID)); ?>"><span><?php the_field('close_p6', get_field('contact',$post->ID)); ?></span></a>
+					<?php the_field('if_you_prefer_it', get_field('contact',$post->ID)); ?> 
+					</fieldset>
+		        </form>
+
 		        <form id="contact">  
 							<fieldset>
 								<legend align="center"><?php the_field('title_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></legend>
@@ -29,8 +38,8 @@
 		            <input maxlength="50" placeholder="<?php the_field('email'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" name="email" type="text" />
 		            <input maxlength="30"  placeholder="<?php the_field('phone_number'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" name="phone" type="tel" />
 		            <textarea maxlength="200" placeholder="<?php the_field('short_intro'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" name="message"></textarea>
-		            <a class="button md-close" data-text="Close"><span><?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></span></a>
-		            <button class="primary" name="submit" data-text="Send" type="submit"><span><?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></span></button>
+		            <a class="button md-close" data-text="<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>"><span><?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></span></a>
+		            <button class="primary" name="submit" data-text="<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" type="submit"><span><?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></span></button>
 		            
 		            
 		            <?php the_field('if_you_prefer_it'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>                   
