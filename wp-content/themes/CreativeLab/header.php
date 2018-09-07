@@ -81,8 +81,8 @@ session_start();
 			<a href="#section5"><?php the_field('featured_works'.$_SESSION['lang'], 'options'); ?></a>
 			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$_SESSION['lang'], 'options'); ?></a>
 			<div class="lang-div">
-				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en""></a>
-				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp""></a>
+				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en""><img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/england.jpg"></a>
+				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp""><img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/japan.jpg"></a>
 			</div>
 		</nav>
 		
