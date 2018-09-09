@@ -19,15 +19,16 @@
 				<!-- Account Form -->
 				<form id="contact">  
 					<fieldset>
-						<legend align="center"><?php the_field('title_p6', get_field('contact',$post->ID)); ?></legend>
-						<p><?php the_field('text_p6', get_field('contact',$post->ID)); ?></p>
+						<legend align="center"><?php the_field('title_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></legend>
+						<p><?php the_field('text_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
 						<?php the_field('form', get_field('contact',$post->ID)); ?>  
-						<a class="button md-close" data-text="<?php the_field('close_p6', get_field('contact',$post->ID)); ?>"><span><?php the_field('close_p6', get_field('contact',$post->ID)); ?></span></a>
-					<?php the_field('if_you_prefer_it', get_field('contact',$post->ID)); ?> 
+					<?php the_field('if_you_prefer_it'.$_SESSION['lang'], get_field('contact',$post->ID)); ?> 
+					<label for="full-name">abcs</label>
 					</fieldset>
 		        </form>
 
-		        <form id="contact">  
+
+		       <form id="contact">  
 							<fieldset>
 								<legend align="center"><?php the_field('title_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></legend>
 
@@ -45,7 +46,7 @@
 		            <?php the_field('if_you_prefer_it'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>                   
 		                        
 							</fieldset>
-		        </form>
+		        </form> 
 
 				<p id="success"><?php the_field('success'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
 				<p id="error"><?php the_field('error'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
@@ -330,3 +331,22 @@
 <script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.validate.min.js"></script>
 
 <script src="<?php bloginfo('template_url'); ?>/creative/js/global.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#ip-fullname').prop('placeholder','<?php the_field('full_name'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+		$('#ip-company').prop('placeholder','<?php the_field('your_company_name'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+		$('#ip-email').prop('placeholder','<?php the_field('email'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+		$('#ip-phone').prop('placeholder','<?php the_field('phone_number'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+		$('#ip-text').prop('placeholder','<?php the_field('short_intro'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+
+		$('#btn-close').prop('type','button');
+		$('#btn-close').prop('value','<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+
+		$('#submit-btn').prop('value','<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+
+		$(document).ajaxComplete(function(event, xhr, settings) {
+			$('#btn-close').val('<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+			$('#submit-btn').val('<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+		});
+	});
+</script>
