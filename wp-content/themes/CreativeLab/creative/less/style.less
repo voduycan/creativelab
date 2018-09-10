@@ -93,6 +93,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 	}
 }
 #label-close::before,#label-send::before{
+	text-transform: uppercase;
     width: 100%;
     padding: 8px;
     position: absolute;
@@ -107,12 +108,10 @@ input::-moz-placeholder, textarea::-moz-placeholder {
     z-index: 1;
 }
 #label-close::before{
-	content: "CLOSE";
  	background: black;
  	color: white;
 }
 #label-send::before{
-	content: "SEND";
 	background: white;
 	color: black;
 }
@@ -128,6 +127,13 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 #label-send{
 	margin-left: 15px;
     background: #ffc90e;
+    span.ajax-loader{
+	    position: absolute;
+	    top: 50%;
+	    right: 7px;
+	    margin-top: -8px;
+        z-index: 200;
+	}
 }
 #submit-btn{
 	background: #ffc90e;
@@ -151,7 +157,24 @@ input::-moz-placeholder, textarea::-moz-placeholder {
     z-index: -1;
     @media only screen and (max-width: 767px){
     	width: 6em !important;
+    	padding-top: 0;
+	    padding-bottom: 0;
+	    height: 27px;
     }
+}
+div.wpcf7-response-output{
+	border: none;
+    padding: 0;
+    margin-top: -1em;
+    margin-bottom: 2em;
+    font-weight: bold;
+    font-size: 13px;   
+	}
+div.wpcf7-validation-errors{
+ 	color: #ff6b6b;
+}
+span.wpcf7-not-valid-tip{
+	display: none !important;
 }
 header, 
 footer,

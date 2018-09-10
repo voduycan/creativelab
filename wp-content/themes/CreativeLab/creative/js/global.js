@@ -226,73 +226,73 @@ $(function() {
   // Validating Contact Form
 	//---------------------------------------------------
      
-  $('#contact').validate({
-    rules: {
-      "Full Name": {
-        required: true,
-        minlength: 2
-      },
-      "Company": {
-        required: true,
-        minlength: 2
-      },
-      "Email": {
-        required: true,
-        email: true
-      },
-      "Phone": {
-        required: true,
-        number: true
-      },
-      "Description": {
-        required: true,
-        minlength: 10
-      }
-    },
+ //  $('#contact').validate({
+ //    rules: {
+ //      "Full Name": {
+ //        required: true,
+ //        minlength: 2
+ //      },
+ //      "Company": {
+ //        required: true,
+ //        minlength: 2
+ //      },
+ //      "Email": {
+ //        required: true,
+ //        email: true
+ //      },
+ //      "Phone": {
+ //        required: true,
+ //        number: true
+ //      },
+ //      "Description": {
+ //        required: true,
+ //        minlength: 10
+ //      }
+ //    },
 
-    messages: {
-      "full-name": {
-        required: "Come on, you have a name don't you?",
-        minlength: "Your full name must consist of at least 2 characters."
-      },
-      "company": {
-        required: "We would like to know your company name",
-        minlength: "Your company name must consist of at least 2 characters."
-      },
-      "email": {
-        required: "No email, no message."
-      },
-      "phone": {
-        required: "We would like to have your phone number."
-      },
-      "message": {
-        required: "You need to write something to send this form.",
-        minlength: "Thats all? really?"
-      }
-    },
+ //    messages: {
+ //      "full-name": {
+ //        required: "Come on, you have a name don't you?",
+ //        minlength: "Your full name must consist of at least 2 characters."
+ //      },
+ //      "company": {
+ //        required: "We would like to know your company name",
+ //        minlength: "Your company name must consist of at least 2 characters."
+ //      },
+ //      "email": {
+ //        required: "No email, no message."
+ //      },
+ //      "phone": {
+ //        required: "We would like to have your phone number."
+ //      },
+ //      "message": {
+ //        required: "You need to write something to send this form.",
+ //        minlength: "Thats all? really?"
+ //      }
+ //    },
 
-    submitHandler: function(form) {
+ //    submitHandler: function(form) {
 	    
-    	var jqxhr = $.ajax({
-    		method: "POST",
-				url: $(form).attr('action') || '/process.php',
-				data: $(form).serialize()
-    	})
+ //    	var jqxhr = $.ajax({
+ //    		method: "POST",
+	// 			url: $(form).attr('action') || '/process.php',
+	// 			data: $(form).serialize()
+ //    	})
     	
-			.done(function() {
-		    $('#contact :input').val('');
-          	$('#success').fadeIn().delay(7000).fadeOut();
-			})
+	// 		.done(function() {
+	// 	    $('#contact :input').val('');
+ //          	$('#success').fadeIn().delay(7000).fadeOut();
+	// 		})
 		
-			.fail(function() {
-		    $('#contact :input').val('');
-            $('#error').fadeIn().delay(7000).fadeOut();
-			});
+	// 		.fail(function() {
+	// 	    $('#contact :input').val('');
+ //            $('#error').fadeIn().delay(7000).fadeOut();
+	// 		});
 		
-			return;
+	// 		return;
 		
-	  }
+	//   }
 
-	});
+	// });
 
 });

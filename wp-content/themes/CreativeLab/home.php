@@ -17,39 +17,17 @@
 		<div class="md-modal" id="modal-contact">
 			<div class="md-form">
 				<!-- Account Form -->
-				<form id="contact">  
+				<div id="contact" method="post">  
 					<fieldset>
 						<legend align="center"><?php the_field('title_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></legend>
 						<p><?php the_field('text_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
-						<?php the_field('form', get_field('contact',$post->ID)); ?>  
+						<?php the_field('form'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>  
 					<?php the_field('if_you_prefer_it'.$_SESSION['lang'], get_field('contact',$post->ID)); ?> 
-					<label for="full-name">abcs</label>
 					</fieldset>
-		        </form>
-
-
-		       <form id="contact">  
-							<fieldset>
-								<legend align="center"><?php the_field('title_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></legend>
-
-								<p><?php the_field('text_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
-								
-		            <input maxlength="50"  placeholder="<?php the_field('full_name'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" name="full-name" type="text" />
-		            <input maxlength="50" placeholder="<?php the_field('your_company_name'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" name="company" type="text" />
-		            <input maxlength="50" placeholder="<?php the_field('email'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" name="email" type="text" />
-		            <input maxlength="30"  placeholder="<?php the_field('phone_number'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" name="phone" type="tel" />
-		            <textarea maxlength="200" placeholder="<?php the_field('short_intro'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" name="message"></textarea>
-		            <a class="button md-close" data-text="<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>"><span><?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></span></a>
-		            <button class="primary" name="submit" data-text="<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>" type="submit"><span><?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></span></button>
-		            
-		            
-		            <?php the_field('if_you_prefer_it'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>                   
-		                        
-							</fieldset>
-		        </form> 
-
+		        </div>
+				<!-- 
 				<p id="success"><?php the_field('success'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
-				<p id="error"><?php the_field('error'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
+				<p id="error"><?php the_field('error'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p> -->
 
 	      <h2><?php the_field('creative_house'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></h2>
 	      <p><span class="icon-location"></span> <?php the_field('address'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
@@ -327,8 +305,8 @@
 <script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.debouncedresize.js"></script>
 
 <!-- Jquery Form Plugin & Validate -->
-<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.form.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.validate.min.js"></script>
+<!-- <script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.form.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.validate.min.js"></script> -->
 
 <script src="<?php bloginfo('template_url'); ?>/creative/js/global.js"></script>
 <script type="text/javascript">
@@ -343,10 +321,16 @@
 		$('#btn-close').prop('value','<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
 
 		$('#submit-btn').prop('value','<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
-
+		$('#submit-btn').click(function(){
+			var frm = document.getElementsByClassName('wpcf7-form')[0];
+			   frm.reset();  
+		});
 		$(document).ajaxComplete(function(event, xhr, settings) {
+
 			$('#btn-close').val('<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
 			$('#submit-btn').val('<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
 		});
+		$('#label-close span.ajax-loader').removeClass('ajax-loader');
+
 	});
 </script>

@@ -49,6 +49,14 @@
 	<?php endif; ?>
 	<script src="<?php bloginfo('template_url'); ?>/creative/js/less.js"></script>
 	<script>less.watch();</script>
+	<style type="text/css">
+		#label-close::before{
+			content: "<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>";
+		}
+		#label-send::before{
+			content: "<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>";
+		}
+	</style>
 
 	<!-- <link href="less/main.css" rel="stylesheet" type="text/css"> -->
 
@@ -74,8 +82,6 @@
 	
 
 </head>
-
-
 
 <body <?php body_class(); ?>>
 	<header>
