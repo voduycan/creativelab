@@ -13,21 +13,19 @@
  */
 
 ?>
-<?php
-	// Start the session
-	session_start();
- 
-	$_SESSION['lang'] = ""; 
 
+<?php
+	$lang = ""; 
 	if($_GET['lang'] == 'en'){
-		$_SESSION['lang'] = ""; 
+		$lang = ""; 
 	}
 
 	if($_GET['lang'] == 'jp'){
-		$_SESSION['lang'] = "_jp"; 
+		$lang = "_jp"; 
 	}
 
 ?> 
+
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
@@ -38,6 +36,19 @@
 	<meta name="description" content="Creative Lab is a quality software outsourcing service provider based in Vietnam. We are a small team of designers and developers, who help brands with big ideas."/>
 	<meta name="keywords" content="outsourcing software development mobile web engineering quality control assurance web-maintenance qc e-commerce vietnam"/>
 	<meta name="author" content="Andy Cao"/>
+	
+	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery-2.0.3.min.js"></script>
+
+	<!-- Parallax Effect -->
+	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.stellar.min.js"></script>
+
+	<!-- Waypoint & Modal Effect -->
+	<script src="<?php bloginfo('template_url'); ?>/creative/js/classie.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.easing.min.js"></script>		
+	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.waypoints.v2.0.2.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.debouncedresize.js"></script>
+
+	<script src="<?php bloginfo('template_url'); ?>/creative/js/global.js"></script>
 	
 	<?php wp_head(); ?>
 
@@ -51,10 +62,10 @@
 	<script>less.watch();</script>
 	<style type="text/css">
 		#label-close::before{
-			content: "<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>";
+			content: "<?php the_field('close_p6'.$lang, get_field('contact',$post->ID)); ?>";
 		}
 		#label-send::before{
-			content: "<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>";
+			content: "<?php the_field('send'.$lang, get_field('contact',$post->ID)); ?>";
 		}
 	</style>
 
@@ -78,7 +89,6 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/creative/images/ico/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-
 	
 
 </head>
@@ -88,12 +98,12 @@
 		<a href="http://www.creativelab.vn" class="nav-brand" title="Creative Lab"></a>
 		
 		<nav>
-			<a href="#section1"><?php the_field('intro'.$_SESSION['lang'], 'options'); ?></a>
-			<a href="#section2"><?php the_field('who_is'.$_SESSION['lang'], 'options'); ?></a>
-			<a href="#section3"><?php the_field('our_services'.$_SESSION['lang'], 'options'); ?></a>
-			<a href="#section4"><?php the_field('why_choose_us'.$_SESSION['lang'], 'options'); ?></a>
-			<a href="#section5"><?php the_field('featured_works'.$_SESSION['lang'], 'options'); ?></a>
-			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$_SESSION['lang'], 'options'); ?></a>
+			<a href="#section1"><?php the_field('intro'.$lang, 'options'); ?></a>
+			<a href="#section2"><?php the_field('who_is'.$lang, 'options'); ?></a>
+			<a href="#section3"><?php the_field('our_services'.$lang, 'options'); ?></a>
+			<a href="#section4"><?php the_field('why_choose_us'.$lang, 'options'); ?></a>
+			<a href="#section5"><?php the_field('featured_works'.$lang, 'options'); ?></a>
+			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$lang, 'options'); ?></a>
 			<div class="lang-div">
 				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en""><span class="icon-america lang-font"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span></span></a>
 				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp""><span class="icon-japan lang-font"><span class="path1"></span><span class="path2"></span></span></a>

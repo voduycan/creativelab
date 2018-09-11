@@ -8,29 +8,29 @@
  */
  
 ?>
-<?php
-	session_start();
-?>
  <?php  get_header(); ?>
  	
 		<!-- Modal Contact -->
+
+		<?php global $lang; ?>
+		
 		<div class="md-modal" id="modal-contact">
 			<div class="md-form">
 				<!-- Account Form -->
 				<div id="contact" method="post">  
 					<fieldset>
-						<legend align="center"><?php the_field('title_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></legend>
-						<p><?php the_field('text_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
-						<?php the_field('form'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>  
-					<?php the_field('if_you_prefer_it'.$_SESSION['lang'], get_field('contact',$post->ID)); ?> 
+						<legend align="center"><?php the_field('title_p6'.$lang, get_field('contact',$post->ID)); ?></legend>
+						<p><?php the_field('text_p6'.$lang, get_field('contact',$post->ID)); ?></p>
+						<?php the_field('form'.$lang, get_field('contact',$post->ID)); ?>  
+					<?php the_field('if_you_prefer_it'.$lang, get_field('contact',$post->ID)); ?> 
 					</fieldset>
 		        </div>
 				<!-- 
-				<p id="success"><?php the_field('success'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
-				<p id="error"><?php the_field('error'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p> -->
+				<p id="success"><?php the_field('success'.$lang, get_field('contact',$post->ID)); ?></p>
+				<p id="error"><?php the_field('error'.$lang, get_field('contact',$post->ID)); ?></p> -->
 
-	      <h2><?php the_field('creative_house'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></h2>
-	      <p><span class="icon-location"></span> <?php the_field('address'.$_SESSION['lang'], get_field('contact',$post->ID)); ?></p>
+	      <h2><?php the_field('creative_house'.$lang, get_field('contact',$post->ID)); ?></h2>
+	      <p><span class="icon-location"></span> <?php the_field('address'.$lang, get_field('contact',$post->ID)); ?></p>
         
 			</div>
 		</div> <!-- .md-modal -->
@@ -39,15 +39,15 @@
 		<div class="md-modal" id="modal-team">
 			<div class="md-content">
 
-				<?php if( have_rows('team'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID))): ?>
+				<?php if( have_rows('team'.$lang, get_field('who_is_creative_lab',$post->ID))): ?>
 				
-					<?php while( have_rows('team'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID)) ): the_row(); 
+					<?php while( have_rows('team'.$lang, get_field('who_is_creative_lab',$post->ID)) ): the_row(); 
 
 						// vars
-						$name = get_sub_field('name'.$_SESSION['lang']);
-						$work = get_sub_field('work'.$_SESSION['lang']);
-						$avatar = get_sub_field('avatar'.$_SESSION['lang']);
-						$about = get_sub_field('about'.$_SESSION['lang']);
+						$name = get_sub_field('name'.$lang);
+						$work = get_sub_field('work'.$lang);
+						$avatar = get_sub_field('avatar'.$lang);
+						$about = get_sub_field('about'.$lang);
 
 					?>
 					<div class="section">
@@ -62,7 +62,7 @@
 					<?php endwhile; ?>	
 				<?php endif; ?>
 		
-				<a class="button md-close" data-text="<?php the_field('close_p2'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID)); ?>"><span><?php the_field('close_p2'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID)); ?></span></a>
+				<a class="button md-close" data-text="<?php the_field('close_p2'.$lang, get_field('who_is_creative_lab',$post->ID)); ?>"><span><?php the_field('close_p2'.$lang, get_field('who_is_creative_lab',$post->ID)); ?></span></a>
         
 			</div>
 		</div> <!-- .md-modal -->
@@ -70,15 +70,15 @@
 		<!-- Modal Services -->
 		<div class="md-modal" id="modal-services">
 			<div class="md-content">
-				<?php if( have_rows('service'.$_SESSION['lang'], get_field('our_services',$post->ID))): ?>
+				<?php if( have_rows('service'.$lang, get_field('our_services',$post->ID))): ?>
 					
-					<?php while( have_rows('service'.$_SESSION['lang'], get_field('our_services',$post->ID)) ): the_row(); 
+					<?php while( have_rows('service'.$lang, get_field('our_services',$post->ID)) ): the_row(); 
 
 						// vars
-						$name = get_sub_field('name'.$_SESSION['lang']);
-						$work = get_sub_field('work'.$_SESSION['lang']);
-						$logo = get_sub_field('logo'.$_SESSION['lang']);
-						$about = get_sub_field('about'.$_SESSION['lang']);
+						$name = get_sub_field('name'.$lang);
+						$work = get_sub_field('work'.$lang);
+						$logo = get_sub_field('logo'.$lang);
+						$about = get_sub_field('about'.$lang);
 
 					?>
 						<div class="section">
@@ -89,9 +89,9 @@
 
 							<p><?php echo $about; ?></p>
 
-							<?php if( have_rows('tag'.$_SESSION['lang'], get_field('our_services',$post->ID))): ?>
-								<?php while( have_rows('tag'.$_SESSION['lang'], get_field('our_services',$post->ID)) ): the_row(); 
-									$tag = get_sub_field('tag_item'.$_SESSION['lang']);
+							<?php if( have_rows('tag'.$lang, get_field('our_services',$post->ID))): ?>
+								<?php while( have_rows('tag'.$lang, get_field('our_services',$post->ID)) ): the_row(); 
+									$tag = get_sub_field('tag_item'.$lang);
 								?>
 									<span class="tag"><?php echo $tag; ?></span>
 								<?php endwhile; ?>
@@ -101,7 +101,7 @@
 				<?php endif; ?>
 				
 		
-				<a class="button md-close" data-text="<?php the_field('close_p3'.$_SESSION['lang'], get_field('our_services',$post->ID)); ?>"><span><?php the_field('close_p3'.$_SESSION['lang'], get_field('our_services',$post->ID)); ?></span></a>
+				<a class="button md-close" data-text="<?php the_field('close_p3'.$lang, get_field('our_services',$post->ID)); ?>"><span><?php the_field('close_p3'.$lang, get_field('our_services',$post->ID)); ?></span></a>
         
 			</div>
 		</div> <!-- .md-modal -->
@@ -109,15 +109,15 @@
 		<!-- Modal Advantages -->
 		<div class="md-modal" id="modal-advantages">
 			<div class="md-content">
-				<?php if( have_rows('advantage'.$_SESSION['lang'], get_field('why_choose_us',$post->ID))): ?>
+				<?php if( have_rows('advantage'.$lang, get_field('why_choose_us',$post->ID))): ?>
 					
-					<?php while( have_rows('advantage'.$_SESSION['lang'], get_field('why_choose_us',$post->ID)) ): the_row(); 
+					<?php while( have_rows('advantage'.$lang, get_field('why_choose_us',$post->ID)) ): the_row(); 
 
 						// vars
-						$title = get_sub_field('title'.$_SESSION['lang']);
-						$text = get_sub_field('text'.$_SESSION['lang']);
-						$logo = get_sub_field('logo'.$_SESSION['lang']);
-						$about = get_sub_field('about'.$_SESSION['lang']);
+						$title = get_sub_field('title'.$lang);
+						$text = get_sub_field('text'.$lang);
+						$logo = get_sub_field('logo'.$lang);
+						$about = get_sub_field('about'.$lang);
 
 					?>
 						<div class="section">
@@ -135,7 +135,7 @@
 				
 				
 							
-				<a class="button md-close" data-text="<?php the_field('close_p4'.$_SESSION['lang'], get_field('why_choose_us',$post->ID)); ?>"><span><?php the_field('close_p4'.$_SESSION['lang'], get_field('why_choose_us',$post->ID)); ?></span></a>
+				<a class="button md-close" data-text="<?php the_field('close_p4'.$lang, get_field('why_choose_us',$post->ID)); ?>"><span><?php the_field('close_p4'.$lang, get_field('why_choose_us',$post->ID)); ?></span></a>
         
 			</div>
 		</div> <!-- .md-modal -->
@@ -143,16 +143,16 @@
 		<!-- Modal Featured Works -->
 		<div class="md-modal" id="modal-featured-works">
 			<div class="md-content">
-				<?php if( have_rows('app'.$_SESSION['lang'], get_field('featured_works',$post->ID))): ?>
+				<?php if( have_rows('app'.$lang, get_field('featured_works',$post->ID))): ?>
 					
-					<?php while( have_rows('app'.$_SESSION['lang'], get_field('featured_works',$post->ID)) ): the_row(); 
+					<?php while( have_rows('app'.$lang, get_field('featured_works',$post->ID)) ): the_row(); 
 
 						// vars
-						$name = get_sub_field('name'.$_SESSION['lang']);
-						$kind = get_sub_field('kind'.$_SESSION['lang']);
-						$logo = get_sub_field('logo'.$_SESSION['lang']);
-						$about = get_sub_field('about'.$_SESSION['lang']);
-						$image = get_sub_field('image'.$_SESSION['lang']);
+						$name = get_sub_field('name'.$lang);
+						$kind = get_sub_field('kind'.$lang);
+						$logo = get_sub_field('logo'.$lang);
+						$about = get_sub_field('about'.$lang);
+						$image = get_sub_field('image'.$lang);
 
 					?>
 						<div class="section">
@@ -171,7 +171,7 @@
 				<?php endif; ?>
 				
 															
-				<a class="button md-close" data-text="<?php the_field('close_p5'.$_SESSION['lang'], get_field('featured_works',$post->ID)); ?>"><span><?php the_field('close_p5'.$_SESSION['lang'], get_field('featured_works',$post->ID)); ?></span></a>
+				<a class="button md-close" data-text="<?php the_field('close_p5'.$lang, get_field('featured_works',$post->ID)); ?>"><span><?php the_field('close_p5'.$lang, get_field('featured_works',$post->ID)); ?></span></a>
         
 			</div>
 		</div> <!-- .md-modal -->
@@ -198,11 +198,11 @@
 				
 				<div class="wrap">
 					
-					<h1><?php the_field('title'.$_SESSION['lang'], get_field('intro',$post->ID)); ?></h1>
+					<h1><?php the_field('title'.$lang, get_field('intro',$post->ID)); ?></h1>
 					
 					<a class="next-btn" href="#section2">
-						<span><?php the_field('next_page'.$_SESSION['lang'], get_field('intro',$post->ID)); ?></span>
-						<span><?php the_field('who_is_creative_lab'.$_SESSION['lang'], get_field('intro',$post->ID)); ?></span>
+						<span><?php the_field('next_page'.$lang, get_field('intro',$post->ID)); ?></span>
+						<span><?php the_field('who_is_creative_lab'.$lang, get_field('intro',$post->ID)); ?></span>
 						<span class="icon-arrow-down"></span>
 					</a>
 					
@@ -216,13 +216,13 @@
 				
 				<div class="wrap">
 					
-					<h1><?php the_field('title_p2'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID)); ?></h1>
-					<p><?php the_field('text_p2'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID)); ?></p>
-					<a class="button primary md-trigger" data-text="<?php the_field('meet_the_team'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID)); ?>" data-modal="modal-team"><span><?php the_field('meet_the_team'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID)); ?></span></a>
+					<h1><?php the_field('title_p2'.$lang, get_field('who_is_creative_lab',$post->ID)); ?></h1>
+					<p><?php the_field('text_p2'.$lang, get_field('who_is_creative_lab',$post->ID)); ?></p>
+					<a class="button primary md-trigger" data-text="<?php the_field('meet_the_team'.$lang, get_field('who_is_creative_lab',$post->ID)); ?>" data-modal="modal-team"><span><?php the_field('meet_the_team'.$lang, get_field('who_is_creative_lab',$post->ID)); ?></span></a>
 					
 					<a class="next-btn" href="#section3">
-						<span><?php the_field('next_page_p2'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID)); ?></span>
-						<span><?php the_field('our_services'.$_SESSION['lang'], get_field('who_is_creative_lab',$post->ID)); ?></span>
+						<span><?php the_field('next_page_p2'.$lang, get_field('who_is_creative_lab',$post->ID)); ?></span>
+						<span><?php the_field('our_services'.$lang, get_field('who_is_creative_lab',$post->ID)); ?></span>
 						<span class="icon-arrow-down"></span>
 					</a>
 				
@@ -236,13 +236,13 @@
 				
 				<div class="wrap">
 					
-					<h1><?php the_field('title_p3'.$_SESSION['lang'], get_field('our_services',$post->ID)); ?></h1>
-					<p><?php the_field('text_p3'.$_SESSION['lang'], get_field('our_services',$post->ID)); ?></p>
-					<a class="button primary md-trigger" data-text="<?php the_field('explore_services'.$_SESSION['lang'], get_field('our_services',$post->ID)); ?>" data-modal="modal-services"><span><?php the_field('explore_services'.$_SESSION['lang'], get_field('our_services',$post->ID)); ?></span></a>
+					<h1><?php the_field('title_p3'.$lang, get_field('our_services',$post->ID)); ?></h1>
+					<p><?php the_field('text_p3'.$lang, get_field('our_services',$post->ID)); ?></p>
+					<a class="button primary md-trigger" data-text="<?php the_field('explore_services'.$lang, get_field('our_services',$post->ID)); ?>" data-modal="modal-services"><span><?php the_field('explore_services'.$lang, get_field('our_services',$post->ID)); ?></span></a>
 					
 					<a class="next-btn" href="#section4">
-						<span><?php the_field('next_page_p3'.$_SESSION['lang'], get_field('our_services',$post->ID)); ?></span>
-						<span><?php the_field('why_choose_us'.$_SESSION['lang'], get_field('our_services',$post->ID)); ?></span>
+						<span><?php the_field('next_page_p3'.$lang, get_field('our_services',$post->ID)); ?></span>
+						<span><?php the_field('why_choose_us'.$lang, get_field('our_services',$post->ID)); ?></span>
 						<span class="icon-arrow-down"></span>
 					</a>
 				
@@ -255,13 +255,13 @@
 				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section4.png" alt="" data-stellar-ratio="0.8">
 				<div class="wrap">
 					
-					<h1><?php the_field('title_p4'.$_SESSION['lang'], get_field('why_choose_us',$post->ID)); ?></h1>
-					<p><?php the_field('text_p4'.$_SESSION['lang'], get_field('why_choose_us',$post->ID)); ?></p>
-					<a class="button primary md-trigger" data-text="<?php the_field('our_advantages'.$_SESSION['lang'], get_field('why_choose_us',$post->ID)); ?>" data-modal="modal-advantages"><span><?php the_field('our_advantages'.$_SESSION['lang'], get_field('why_choose_us',$post->ID)); ?></span></a>
+					<h1><?php the_field('title_p4'.$lang, get_field('why_choose_us',$post->ID)); ?></h1>
+					<p><?php the_field('text_p4'.$lang, get_field('why_choose_us',$post->ID)); ?></p>
+					<a class="button primary md-trigger" data-text="<?php the_field('our_advantages'.$lang, get_field('why_choose_us',$post->ID)); ?>" data-modal="modal-advantages"><span><?php the_field('our_advantages'.$lang, get_field('why_choose_us',$post->ID)); ?></span></a>
 					
 					<a class="next-btn" href="#section5">
-						<span><?php the_field('next_page_p4'.$_SESSION['lang'], get_field('why_choose_us',$post->ID)); ?></span>
-						<span><?php the_field('featured_works'.$_SESSION['lang'], get_field('why_choose_us',$post->ID)); ?></span>
+						<span><?php the_field('next_page_p4'.$lang, get_field('why_choose_us',$post->ID)); ?></span>
+						<span><?php the_field('featured_works'.$lang, get_field('why_choose_us',$post->ID)); ?></span>
 						<span class="icon-arrow-down"></span>
 					</a>
 					
@@ -274,13 +274,13 @@
 				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section5.png" alt="" data-stellar-ratio="0.8">
 				<div class="wrap">
 					
-					<h1><?php the_field('title_p5'.$_SESSION['lang'], get_field('featured_works',$post->ID)); ?></h1>
-					<p><?php the_field('text_p5'.$_SESSION['lang'], get_field('featured_works',$post->ID)); ?></p>
-					<a class="button primary md-trigger" data-text="<?php the_field('works_weve_done'.$_SESSION['lang'], get_field('featured_works',$post->ID)); ?>" data-modal="modal-featured-works"><span><?php the_field('works_weve_done'.$_SESSION['lang'], get_field('featured_works',$post->ID)); ?></span></a>
+					<h1><?php the_field('title_p5'.$lang, get_field('featured_works',$post->ID)); ?></h1>
+					<p><?php the_field('text_p5'.$lang, get_field('featured_works',$post->ID)); ?></p>
+					<a class="button primary md-trigger" data-text="<?php the_field('works_weve_done'.$lang, get_field('featured_works',$post->ID)); ?>" data-modal="modal-featured-works"><span><?php the_field('works_weve_done'.$lang, get_field('featured_works',$post->ID)); ?></span></a>
 					
 					<a class="next-btn md-trigger" data-modal="modal-contact">
-						<span><?php the_field('contact_us'.$_SESSION['lang'], get_field('featured_works',$post->ID)); ?></span>
-						<span><?php the_field('lets_talk'.$_SESSION['lang'], get_field('featured_works',$post->ID)); ?></span>
+						<span><?php the_field('contact_us'.$lang, get_field('featured_works',$post->ID)); ?></span>
+						<span><?php the_field('lets_talk'.$lang, get_field('featured_works',$post->ID)); ?></span>
 						<span class="icon-talk"></span>
 					</a>
 					
@@ -292,44 +292,23 @@
 <?php  get_footer(); ?>
 		
 <!-- Load JS here for greater good =============================-->
-
-<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery-2.0.3.min.js"></script>
-
-<!-- Parallax Effect -->
-<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.stellar.min.js"></script>
-
-<!-- Waypoint & Modal Effect -->
-<script src="<?php bloginfo('template_url'); ?>/creative/js/classie.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.easing.min.js"></script>		
-<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.waypoints.v2.0.2.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.debouncedresize.js"></script>
-
-<!-- Jquery Form Plugin & Validate -->
-<!-- <script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.form.min.js"></script>
-<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.validate.min.js"></script> -->
-
-<script src="<?php bloginfo('template_url'); ?>/creative/js/global.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#ip-fullname').prop('placeholder','<?php the_field('full_name'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
-		$('#ip-company').prop('placeholder','<?php the_field('your_company_name'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
-		$('#ip-email').prop('placeholder','<?php the_field('email'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
-		$('#ip-phone').prop('placeholder','<?php the_field('phone_number'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
-		$('#ip-text').prop('placeholder','<?php the_field('short_intro'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+		$('#ip-fullname').prop('placeholder','<?php the_field('full_name'.$lang, get_field('contact',$post->ID)); ?>');
+		$('#ip-company').prop('placeholder','<?php the_field('your_company_name'.$lang, get_field('contact',$post->ID)); ?>');
+		$('#ip-email').prop('placeholder','<?php the_field('email'.$lang, get_field('contact',$post->ID)); ?>');
+		$('#ip-phone').prop('placeholder','<?php the_field('phone_number'.$lang, get_field('contact',$post->ID)); ?>');
+		$('#ip-text').prop('placeholder','<?php the_field('short_intro'.$lang, get_field('contact',$post->ID)); ?>');
 
 		$('#btn-close').prop('type','button');
-		$('#btn-close').prop('value','<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+		$('#btn-close').prop('value','<?php the_field('close_p6'.$lang, get_field('contact',$post->ID)); ?>');
 
-		$('#submit-btn').prop('value','<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
+		$('#submit-btn').prop('value','<?php the_field('send'.$lang, get_field('contact',$post->ID)); ?>');
 		$('#submit-btn').click(function(){
 			var frm = document.getElementsByClassName('wpcf7-form')[0];
 			   frm.reset();  
 		});
-		$(document).ajaxComplete(function(event, xhr, settings) {
-
-			$('#btn-close').val('<?php the_field('close_p6'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
-			$('#submit-btn').val('<?php the_field('send'.$_SESSION['lang'], get_field('contact',$post->ID)); ?>');
-		});
+		
 		$('#label-close span.ajax-loader').removeClass('ajax-loader');
 
 	});

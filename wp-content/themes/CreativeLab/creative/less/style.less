@@ -3,10 +3,14 @@ footer,
 .wrap,
 a,
 input,
-textarea{
+textarea, 
+section{
 	-webkit-box-sizing: unset; 
     -moz-box-sizing: unset;
     box-sizing: unset; 
+}
+header a.icon-menu{
+	position: relative;
 }
 a:hover{
 	color: inherit;
@@ -117,6 +121,9 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 }
 #label-close{
 	background: white;
+	span.ajax-loader{
+		display: none !important;
+	}
 }
 #label-close:hover::before, #label-send:hover::before{
 	transform: translateX(0);
@@ -168,7 +175,8 @@ div.wpcf7-response-output{
     margin-top: -1em;
     margin-bottom: 2em;
     font-weight: bold;
-    font-size: 13px;   
+    font-size: 13px;
+    color: #9dcb3b;   
 	}
 div.wpcf7-validation-errors{
  	color: #ff6b6b;
