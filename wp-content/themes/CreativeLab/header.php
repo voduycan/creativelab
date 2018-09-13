@@ -15,15 +15,21 @@
 ?>
 
 <?php
-	$lang = ""; 
-	if($_GET['lang'] == 'en'){
-		$lang = ""; 
+	if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+	$_SESSION["lan"] = ""; 
+	
+	if(isset($_GET["lang"])){
+		if($_GET["lang"] == "en"){
+		$_SESSION["lan"] = ""; 
+		}
+		if($_GET["lang"] == "jp"){
+			$_SESSION["lan"] = "_jp"; 
+		}
 	}
-
-	if($_GET['lang'] == 'jp'){
-		$lang = "_jp"; 
-	}
-
+	
 ?> 
 
 <!DOCTYPE html>
@@ -36,9 +42,8 @@
 	<meta name="description" content="Creative Lab is a quality software outsourcing service provider based in Vietnam. We are a small team of designers and developers, who help brands with big ideas."/>
 	<meta name="keywords" content="outsourcing software development mobile web engineering quality control assurance web-maintenance qc e-commerce vietnam"/>
 	<meta name="author" content="Andy Cao"/>
-	
 	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery-2.0.3.min.js"></script>
-
+	
 	<!-- Parallax Effect -->
 	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.stellar.min.js"></script>
 
@@ -53,7 +58,7 @@
 	<?php wp_head(); ?>
 
 	<link href="<?php bloginfo('template_url'); ?>/creative/less/main.less" rel="stylesheet/less" type="text/css">
-	<?php if($_GET['lang'] == 'jp'): ?>
+	<?php if($_SESSION["lan"] == 'jp'): ?>
 		
 		<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url'); ?>/creative/less/jp-style.less">
 		
@@ -62,10 +67,10 @@
 	<script>less.watch();</script>
 	<style type="text/css">
 		#label-close::before{
-			content: "<?php the_field('close_p6'.$lang, get_field('contact',$post->ID)); ?>";
+			content: "<?php the_field('close_p6'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>";
 		}
 		#label-send::before{
-			content: "<?php the_field('send'.$lang, get_field('contact',$post->ID)); ?>";
+			content: "<?php the_field('send'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>";
 		}
 	</style>
 
@@ -98,12 +103,12 @@
 		<a href="http://www.creativelab.vn" class="nav-brand" title="Creative Lab"></a>
 		
 		<nav>
-			<a href="#section1"><?php the_field('intro'.$lang, 'options'); ?></a>
-			<a href="#section2"><?php the_field('who_is'.$lang, 'options'); ?></a>
-			<a href="#section3"><?php the_field('our_services'.$lang, 'options'); ?></a>
-			<a href="#section4"><?php the_field('why_choose_us'.$lang, 'options'); ?></a>
-			<a href="#section5"><?php the_field('featured_works'.$lang, 'options'); ?></a>
-			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$lang, 'options'); ?></a>
+			<a href="#section1"><?php the_field('intro'.$_SESSION["lan"], 'options'); ?></a>
+			<a href="#section2"><?php the_field('who_is'.$_SESSION["lan"], 'options'); ?></a>
+			<a href="#section3"><?php the_field('our_services'.$_SESSION["lan"], 'options'); ?></a>
+			<a href="#section4"><?php the_field('why_choose_us'.$_SESSION["lan"], 'options'); ?></a>
+			<a href="#section5"><?php the_field('featured_works'.$_SESSION["lan"], 'options'); ?></a>
+			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$_SESSION["lan"], 'options'); ?></a>
 			<div class="lang-div">
 				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en""><span class="icon-america lang-font"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span></span></a>
 				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp""><span class="icon-japan lang-font"><span class="path1"></span><span class="path2"></span></span></a>

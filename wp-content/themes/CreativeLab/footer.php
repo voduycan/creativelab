@@ -13,7 +13,12 @@
  */
 
 ?>
-<?php global $lang; ?>
+<?php
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+?>
 		<footer>
 			
 			<!--
@@ -23,7 +28,7 @@
 			</ul>
 			 -->
 			
-			<p><?php the_field('copy_right'.$lang, 'options'); ?></p>
+			<p><?php the_field('copy_right'.$_SESSION["lan"], 'options'); ?></p>
 		</footer>
 <?php wp_footer(); ?>
 

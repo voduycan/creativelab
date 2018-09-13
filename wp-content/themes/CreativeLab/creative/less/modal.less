@@ -117,7 +117,7 @@
 				padding: 12px;
 				margin: .2em;
 				color: black;
-				border: none;
+				border: 1px solid transparent;
 				outline: none;
 				font-family: @font-family-title;
 				font-size: @font-size-base - 3;
@@ -126,6 +126,9 @@
 				.placeholder(rgba(0, 0, 0, .3));
 				
 				&:focus { background: @color-yellow; }
+			}
+			input.wpcf7-not-valid{
+				border-color: #ff0000 !important;
 			}
 			
 			textarea {
