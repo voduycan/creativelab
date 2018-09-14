@@ -30,9 +30,6 @@
 					<?php the_field('if_you_prefer_it'.$_SESSION["lan"], get_field('contact',$post->ID)); ?> 
 					</fieldset>
 		        </div>
-				<!-- 
-				<p id="success"><?php the_field('success'.$_SESSION["lan"], get_field('contact',$post->ID)); ?></p>
-				<p id="error"><?php the_field('error'.$_SESSION["lan"], get_field('contact',$post->ID)); ?></p> -->
 
 	      <h2><?php the_field('creative_house'.$_SESSION["lan"], get_field('contact',$post->ID)); ?></h2>
 	      <p><span class="icon-location"></span> <?php the_field('address'.$_SESSION["lan"], get_field('contact',$post->ID)); ?></p>
@@ -318,7 +315,18 @@
 		$('#label-send').click(function(){
 			$('#label-send .ajax-loader').addClass('icon-loading');
 		});
+		document.addEventListener( 'wpcf7mailsent', function( event ) {
+			$('#submit-btn').prop('disabled', 'disabled');
+			$('#label-send').addClass('not-allowed');	
+			setTimeout(function() {$('#submit-btn').prop('disabled', '')}, 3 * 60 * 1000);
+			setTimeout(function() {$('#label-send').removeClass('not-allowed')}, 3 * 60 * 1000);
+		}, false );
+		document.addEventListener( 'wpcf7submit', function( event ) {
+			setTimeout(function() {$('.wpcf7-response-output').fadeOut('1000','linear',true)}, 5 * 1000);
+		}, false );
 	});
+		
+
 </script>
 		
 <!-- Load JS here for greater good =============================-->

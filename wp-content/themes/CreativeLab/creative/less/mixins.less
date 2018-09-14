@@ -140,7 +140,13 @@
   &.placeholder                 { color: @color; } // Fallback
 }
 
-
+.placeholder-font(@font-family){
+  &:-moz-placeholder            { font-family:  @font-family; } // Firefox 4-18
+  &::-moz-placeholder           { font-family:  @font-family; } // Firefox 19+}   
+  &:-ms-input-placeholder       { font-family:  @font-family; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { font-family:  @font-family; } // Safari and Chrome
+  &.placeholder                 { font-family:  @font-family; } // Fallback
+}
 // Single side border-radius
 // --------------------------------------------------
 
@@ -242,6 +248,17 @@
   -webkit-animation-delay: @animation-delay;
           animation-delay: @animation-delay;
 }
+
+.box-sizing(@box-sizing) {
+    -webkit-box-sizing: @box-sizing; 
+    -moz-box-sizing: @box-sizing;
+    box-sizing: @box-sizing; 
+}
+
+// animation ajax-loading
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 // Hamburger Menu Effect
 @-webkit-keyframes anim-jelly {
