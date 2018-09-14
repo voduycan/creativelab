@@ -22,7 +22,7 @@
 		<div class="md-modal" id="modal-contact">
 			<div class="md-form">
 				<!-- Account Form -->
-				<div id="contact" method="post">  
+				<div id="contact">  
 					<fieldset>
 						<legend align="center"><?php the_field('title_p6'.$_SESSION["lan"], get_field('contact',$post->ID)); ?></legend>
 						<p><?php the_field('text_p6'.$_SESSION["lan"], get_field('contact',$post->ID)); ?></p>
@@ -85,7 +85,7 @@
 					?>
 						<div class="section">
 							<div class="title">
-								<span><strong><?php echo $name; ?></strong></strong><?php echo $work; ?></span>
+								<span><strong><?php echo $name; ?></strong><?php echo $work; ?></span>
 								<span class="<?php echo $logo; ?>"></span>
 							</div>
 
@@ -292,7 +292,7 @@
 
 		</div> <!-- main-story -->
 		
-	<script type="text/javascript">
+	<script>
 		
 	$(document).ready(function(){
 		$('#ip-fullname').prop('placeholder','<?php the_field('full_name'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
@@ -316,10 +316,8 @@
 			$('#label-send .ajax-loader').addClass('icon-loading');
 		});
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
-			$('#submit-btn').prop('disabled', 'disabled');
-			$('#label-send').addClass('not-allowed');	
-			setTimeout(function() {$('#submit-btn').prop('disabled', '')}, 3 * 60 * 1000);
-			setTimeout(function() {$('#label-send').removeClass('not-allowed')}, 3 * 60 * 1000);
+			$('#label-send').addClass('d-none');	
+			setTimeout(function() {$('#label-send').removeClass('d-none')}, 3 * 60 * 1000);
 		}, false );
 		document.addEventListener( 'wpcf7submit', function( event ) {
 			setTimeout(function() {$('.wpcf7-response-output').fadeOut('1000','linear',true)}, 5 * 1000);

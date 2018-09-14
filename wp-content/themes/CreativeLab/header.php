@@ -57,15 +57,15 @@
 	
 	<?php wp_head(); ?>
 
-	<link href="<?php bloginfo('template_url'); ?>/creative/less/main.less" rel="stylesheet/less" type="text/css">
+	<link href="<?php bloginfo('template_url'); ?>/creative/less/main.less" rel="stylesheet/less">
 	<?php if($_SESSION["lan"] == 'jp'): ?>
 		
-		<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_url'); ?>/creative/less/jp-style.less">
+		<link rel="stylesheet/less" href="<?php bloginfo('template_url'); ?>/creative/less/jp-style.less">
 		
 	<?php endif; ?>
 	<script src="<?php bloginfo('template_url'); ?>/creative/js/less.js"></script>
 	<script>less.watch();</script>
-	<style type="text/css">
+	<style>
 		#label-close::before{
 			content: "<?php the_field('close_p6'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>";
 		}
@@ -74,7 +74,7 @@
 		}
 	</style>
 
-	<!-- <link href="less/main.css" rel="stylesheet" type="text/css"> -->
+	<!-- <link href="less/main.css" rel="stylesheet"> -->
 
 	<!-- Favicon -->	
 	<link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_url'); ?>/creative/images/ico/apple-icon-57x57.png">
@@ -110,8 +110,8 @@
 			<a href="#section5"><?php the_field('featured_works'.$_SESSION["lan"], 'options'); ?></a>
 			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$_SESSION["lan"], 'options'); ?></a>
 			<div class="lang-div">
-				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en""><span class="icon-america lang-font"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span></span></a>
-				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp""><span class="icon-japan lang-font"><span class="path1"></span><span class="path2"></span></span></a>
+				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en"><span class="icon-america lang-font"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span></span></a>
+				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp"><span class="icon-japan lang-font"><span class="path1"></span><span class="path2"></span></span></a>
 			</div>
 		</nav>
 		
