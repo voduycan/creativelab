@@ -291,9 +291,26 @@
 			</section>
 
 		</div> <!-- main-story -->
-		
 	<script>
-		
+		// Hàm thiết lập Cookie
+		function setCookie(cname, cvalue, exdays) {
+		    var d = new Date();
+		    d.setTime(d.getTime() + (exdays*60*1000));
+		    var expires = "expires="+d.toUTCString();
+		    document.cookie = cname + "=" + cvalue + "; " + expires;
+		}
+		 
+		// Hàm lấy Cookie
+		function getCookie(cname) {
+		    var name = cname + "=";
+		    var ca = document.cookie.split(';');
+		    for(var i=0; i<ca.length; i++) {
+		        var c = ca[i];
+		        while (c.charAt(0)==' ') c = c.substring(1);
+		        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+		    }
+		    return "";
+		}
 	$(document).ready(function(){
 		$('#ip-fullname').prop('placeholder','<?php the_field('full_name'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
 		$('#ip-company').prop('placeholder','<?php the_field('your_company_name'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
@@ -305,7 +322,7 @@
 		$('#btn-close').prop('value','<?php the_field('close_p6'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
 
 		$('#submit-btn').prop('value','<?php the_field('send'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
-		
+			
 		$('#label-close span.ajax-loader').removeClass('ajax-loader');
 		$('.wpcf7-form-control-wrap .wpcf7-form-control').click(function(){
 			if($('.wpcf7-form-control-wrap .wpcf7-form-control').hasClass('wpcf7-not-valid')){
@@ -315,18 +332,40 @@
 		$('#label-send').click(function(){
 			$('#label-send .ajax-loader').addClass('icon-loading');
 		});
+		if(getCookie('userIP')){
+				if(!$('#label-send').hasClass('d-none')){
+					$('#label-send').addClass('d-none');
+				}
+				var interval_obj = setInterval(function() {
+					if (!getCookie('userIP')) {
+						$('#label-send').removeClass('d-none');
+						clearInterval(interval_obj);
+					}
+				}, 5 * 1000);
+			}
 		document.addEventListener( 'wpcf7mailsent', function( event ) {
-			$('#label-send').addClass('d-none');	
-			setTimeout(function() {$('#label-send').removeClass('d-none')}, 3 * 60 * 1000);
+			if(!getCookie('userIP')){
+				setCookie('userIP', 'submit', 3);
+			}
+			if(getCookie('userIP')){
+				if(!$('#label-send').hasClass('d-none')){
+					$('#label-send').addClass('d-none');
+				}
+				var interval_obj2 = setInterval(function() {
+					if (!getCookie('userIP')) {
+						$('#label-send').removeClass('d-none');
+						clearInterval(interval_obj2);
+					}
+				}, 5 * 1000);
+			}
 		}, false );
 		document.addEventListener( 'wpcf7submit', function( event ) {
 			setTimeout(function() {$('.wpcf7-response-output').fadeOut('1000','linear',true)}, 5 * 1000);
 		}, false );
+		
 	});
 		
-
 </script>
-		
 <!-- Load JS here for greater good =============================-->
 
 <?php  get_footer(); ?>
