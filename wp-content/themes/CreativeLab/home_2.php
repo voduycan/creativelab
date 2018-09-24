@@ -185,9 +185,8 @@
 				<a href="#section1"></a>
 				<a href="#section2"></a>
 				<a href="#section3"></a>
-				<a href="#section5"></a>
 				<a href="#section4"></a>
-				
+				<a href="#section5"></a>
 			</nav> <!-- Navigation Dot -->
 
 			<!-- Intro -->
@@ -238,7 +237,7 @@
 					<p><?php the_field('text_p3'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?></p>
 					<a class="button primary md-trigger" data-text="<?php the_field('explore_services'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?>" data-modal="modal-services"><span><?php the_field('explore_services'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?></span></a>
 					
-					<a class="next-btn" href="#section5">
+					<a class="next-btn" href="#section4">
 						<span><?php the_field('next_page_p3'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?></span>
 						<span><?php the_field('why_choose_us'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?></span>
 						<span class="icon-arrow-down"></span>
@@ -248,6 +247,24 @@
 
 			</section>
 			
+			<!-- Why Choose Us -->	
+			<section id="section4" data-stellar-background-ratio="0.3">
+				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section4.png" alt="" data-stellar-ratio="0.8">
+				<div class="wrap">
+					
+					<h1><?php the_field('title_p4'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></h1>
+					<p><?php the_field('text_p4'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></p>
+					<a class="button primary md-trigger" data-text="<?php the_field('our_advantages'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?>" data-modal="modal-advantages"><span><?php the_field('our_advantages'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></span></a>
+					
+					<a class="next-btn" href="#section5">
+						<span><?php the_field('next_page_p4'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></span>
+						<span><?php the_field('featured_works'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></span>
+						<span class="icon-arrow-down"></span>
+					</a>
+					
+				</div>
+
+			</section>
 			
 			<!-- Featured Works -->
 			<section id="section5" data-stellar-background-ratio="0.3">
@@ -258,33 +275,14 @@
 					<p><?php the_field('text_p5'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></p>
 					<a class="button primary md-trigger" data-text="<?php the_field('works_weve_done'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?>" data-modal="modal-featured-works"><span><?php the_field('works_weve_done'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span></a>
 					
-					<a class="next-btn" href="#section4">
+					<a class="next-btn md-trigger" data-modal="modal-contact">
 						<span><?php the_field('contact_us'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span>
 						<span><?php the_field('lets_talk'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span>
-						<span class="icon-arrow-down"></span>
-					</a>
-					
-				</div>
-				
-			</section>
-
-			<!-- Why Choose Us -->	
-			<section id="section4" data-stellar-background-ratio="0.3">
-				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section4.png" alt="" data-stellar-ratio="0.8">
-				<div class="wrap">
-					
-					<h1><?php the_field('title_p4'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></h1>
-					<p><?php the_field('text_p4'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></p>
-					<a class="button primary md-trigger" data-text="<?php the_field('our_advantages'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?>" data-modal="modal-advantages"><span><?php the_field('our_advantages'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></span></a>
-					
-					<a class="next-btn md-trigger"  data-modal="modal-contact">
-						<span><?php the_field('next_page_p4'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></span>
-						<span><?php the_field('featured_works'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></span>
 						<span class="icon-talk"></span>
 					</a>
 					
 				</div>
-
+				
 			</section>
 
 		</div> <!-- main-story -->

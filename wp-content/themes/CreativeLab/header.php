@@ -58,7 +58,7 @@
 	<?php wp_head(); ?>
 
 	<link href="<?php bloginfo('template_url'); ?>/creative/less/main.less" rel="stylesheet/less">
-	<?php if($_SESSION["lan"] == 'jp'): ?>
+	<?php if($_SESSION["lan"] == '_jp'): ?>
 		
 		<link rel="stylesheet/less" href="<?php bloginfo('template_url'); ?>/creative/less/jp-style.less">
 		
@@ -106,8 +106,9 @@
 			<a href="#section1"><?php the_field('intro'.$_SESSION["lan"], 'options'); ?></a>
 			<a href="#section2"><?php the_field('who_is'.$_SESSION["lan"], 'options'); ?></a>
 			<a href="#section3"><?php the_field('our_services'.$_SESSION["lan"], 'options'); ?></a>
-			<a href="#section4"><?php the_field('why_choose_us'.$_SESSION["lan"], 'options'); ?></a>
 			<a href="#section5"><?php the_field('featured_works'.$_SESSION["lan"], 'options'); ?></a>
+			<a href="#section4"><?php the_field('why_choose_us'.$_SESSION["lan"], 'options'); ?></a>
+
 			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$_SESSION["lan"], 'options'); ?></a>
 			<div class="lang-div">
 				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en"><span class="icon-america lang-font"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span></span></a>
