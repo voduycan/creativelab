@@ -185,8 +185,9 @@
 				<a href="#section1"></a>
 				<a href="#section2"></a>
 				<a href="#section3"></a>
-				<a href="#section5"></a>
 				<a href="#section4"></a>
+				<a href="#section5"></a>
+				
 				
 			</nav> <!-- Navigation Dot -->
 
@@ -238,7 +239,7 @@
 					<p><?php the_field('text_p3'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?></p>
 					<a class="button primary md-trigger" data-text="<?php the_field('explore_services'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?>" data-modal="modal-services"><span><?php the_field('explore_services'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?></span></a>
 					
-					<a class="next-btn" href="#section5">
+					<a class="next-btn" href="#section4">
 						<span><?php the_field('next_page_p3'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?></span>
 						<span><?php the_field('why_choose_us'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?></span>
 						<span class="icon-arrow-down"></span>
@@ -250,15 +251,15 @@
 			
 			
 			<!-- Featured Works -->
-			<section id="section5" data-stellar-background-ratio="0.3">
-				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section5.png" alt="" data-stellar-ratio="0.8">
+			<section id="section4" data-stellar-background-ratio="0.3">
+				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section4.png" alt="" data-stellar-ratio="0.8">
 				<div class="wrap">
 					
 					<h1><?php the_field('title_p5'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></h1>
 					<p><?php the_field('text_p5'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></p>
 					<a class="button primary md-trigger" data-text="<?php the_field('works_weve_done'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?>" data-modal="modal-featured-works"><span><?php the_field('works_weve_done'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span></a>
 					
-					<a class="next-btn" href="#section4">
+					<a class="next-btn" href="#section5">
 						<span><?php the_field('contact_us'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span>
 						<span><?php the_field('lets_talk'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span>
 						<span class="icon-arrow-down"></span>
@@ -269,8 +270,8 @@
 			</section>
 
 			<!-- Why Choose Us -->	
-			<section id="section4" data-stellar-background-ratio="0.3">
-				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section4.png" alt="" data-stellar-ratio="0.8">
+			<section id="section5" data-stellar-background-ratio="0.3">
+				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section5.png" alt="" data-stellar-ratio="0.8">
 				<div class="wrap">
 					
 					<h1><?php the_field('title_p4'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></h1>
@@ -288,105 +289,7 @@
 			</section>
 
 		</div> <!-- main-story -->
-	<script>
-		// Hàm thiết lập Cookie
-		function setCookie(cname, cvalue, exdays) {
-		    var d = new Date();
-		    d.setTime(d.getTime() + (exdays*60*1000));
-		    var expires = "expires="+d.toUTCString();
-		    document.cookie = cname + "=" + cvalue + "; " + expires;
-		}
-		 
-		// Hàm lấy Cookie
-		function getCookie(cname) {
-		    var name = cname + "=";
-		    var ca = document.cookie.split(';');
-		    for(var i=0; i<ca.length; i++) {
-		        var c = ca[i];
-		        while (c.charAt(0)==' ') c = c.substring(1);
-		        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
-		    }
-		    return "";
-		}
-	$(document).ready(function(){
-		$('#ip-fullname').prop('placeholder','<?php the_field('full_name'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
-		$('#ip-company').prop('placeholder','<?php the_field('your_company_name'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
-		$('#ip-email').prop('placeholder','<?php the_field('email'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
-		$('#ip-phone').prop('placeholder','<?php the_field('phone_number'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
-		$('#ip-text').prop('placeholder','<?php the_field('short_intro'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
-
-		$('#btn-close').prop('type','button');
-		$('#btn-close').prop('value','<?php the_field('close_p6'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
-
-		$('#submit-btn').prop('value','<?php the_field('send'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
-			
-		$('#label-close span.ajax-loader').removeClass('ajax-loader');
-		$('.wpcf7-form-control-wrap .wpcf7-form-control').click(function(){
-			if($('.wpcf7-form-control-wrap .wpcf7-form-control').hasClass('wpcf7-not-valid')){
-				$(this).removeClass('wpcf7-not-valid');
-			}
-		});
-		$('#label-send').click(function(){
-			$('#label-send .ajax-loader').addClass('icon-loading');
-
-		});
-
-		if(getCookie('userIP')){
-				if(!$('#label-send').hasClass('d-none')){
-					$('#label-send').addClass('d-none');
-					$('#ip-fullname').prop('disabled',true);
-					$('#ip-company').prop('disabled',true);
-					$('#ip-email').prop('disabled',true);
-					$('#ip-phone').prop('disabled',true);
-					$('#ip-text').prop('disabled',true);
-				}
-				var interval_obj = setInterval(function() {
-					if (!getCookie('userIP')) {
-						$('#label-send').removeClass('d-none');
-						$('#ip-fullname').prop('disable',false);
-						$('#ip-company').prop('disabled',false);
-						$('#ip-email').prop('disabled',false);
-						$('#ip-phone').prop('disabled',false);
-						$('#ip-text').prop('disabled',false);
-						clearInterval(interval_obj);
-					}
-				}, 5 * 1000);
-			}
-		document.addEventListener( 'wpcf7mailsent', function( event ) {
-			if(!getCookie('userIP')){
-				setCookie('userIP', 'submit', 3);
-			}
-			if(getCookie('userIP')){
-				if(!$('#label-send').hasClass('d-none')){
-					$('#label-send').addClass('d-none');
-					$('#ip-fullname').prop('disabled',true);
-					$('#ip-company').prop('disabled',true);
-					$('#ip-email').prop('disabled',true);
-					$('#ip-phone').prop('disabled',true);
-					$('#ip-text').prop('disabled',true);
-				}
-				var interval_obj2 = setInterval(function() {
-					if (!getCookie('userIP')) {
-						$('#label-send').removeClass('d-none');
-						$('#ip-fullname').prop('disabled',false);
-						$('#ip-company').prop('disabled',false);
-						$('#ip-email').prop('disabled',false);
-						$('#ip-phone').prop('disabled',false);
-						$('#ip-text').prop('disabled',false);
-						clearInterval(interval_obj2);
-					}
-				}, 5 * 1000);
-			}
-		}, false );
-		document.addEventListener( 'wpcf7submit', function( event ) {
-			setTimeout(function() {$('.wpcf7-response-output').fadeOut('1000','linear',true)}, 5 * 1000);
-		}, false );
-		
-	});
-		
-</script>
-<!-- Load JS here for greater good =============================-->
+	
+	
 
 <?php  get_footer(); ?>
-
-	

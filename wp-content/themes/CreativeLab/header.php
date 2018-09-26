@@ -42,18 +42,6 @@
 	<meta name="description" content="Creative Lab is a quality software outsourcing service provider based in Vietnam. We are a small team of designers and developers, who help brands with big ideas."/>
 	<meta name="keywords" content="outsourcing software development mobile web engineering quality control assurance web-maintenance qc e-commerce vietnam"/>
 	<meta name="author" content="Andy Cao"/>
-	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery-2.0.3.min.js"></script>
-	
-	<!-- Parallax Effect -->
-	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.stellar.min.js"></script>
-
-	<!-- Waypoint & Modal Effect -->
-	<script src="<?php bloginfo('template_url'); ?>/creative/js/classie.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.easing.min.js"></script>		
-	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.waypoints.v2.0.2.min.js"></script>
-	<script src="<?php bloginfo('template_url'); ?>/creative/js/jquery.debouncedresize.js"></script>
-
-	<script src="<?php bloginfo('template_url'); ?>/creative/js/global.js"></script>
 	
 	<?php wp_head(); ?>
 
@@ -106,8 +94,8 @@
 			<a href="#section1"><?php the_field('intro'.$_SESSION["lan"], 'options'); ?></a>
 			<a href="#section2"><?php the_field('who_is'.$_SESSION["lan"], 'options'); ?></a>
 			<a href="#section3"><?php the_field('our_services'.$_SESSION["lan"], 'options'); ?></a>
-			<a href="#section5"><?php the_field('featured_works'.$_SESSION["lan"], 'options'); ?></a>
-			<a href="#section4"><?php the_field('why_choose_us'.$_SESSION["lan"], 'options'); ?></a>
+			<a href="#section4"><?php the_field('featured_works'.$_SESSION["lan"], 'options'); ?></a>
+			<a href="#section5"><?php the_field('why_choose_us'.$_SESSION["lan"], 'options'); ?></a>
 
 			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$_SESSION["lan"], 'options'); ?></a>
 			<div class="lang-div">
