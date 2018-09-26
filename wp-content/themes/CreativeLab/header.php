@@ -39,10 +39,17 @@
 	<title>Creative Lab - A full-service digital design agency from Ho Chi Minh City, Vietnam</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<meta name="description" content="Creative Lab is a quality software outsourcing service provider based in Vietnam. We are a small team of designers and developers, who help brands with big ideas."/>
-	<meta name="keywords" content="outsourcing software development mobile web engineering quality control assurance web-maintenance qc e-commerce vietnam"/>
-	<meta name="author" content="Andy Cao"/>
-	
+
+	<?php if( have_rows('meta'.$_SESSION["lan"], 'options')): ?>
+		<?php while( have_rows('meta'.$_SESSION["lan"], 'options') ): the_row(); 
+			// vars
+			$name = get_sub_field('mt_name'.$_SESSION["lan"]);
+			$content = get_sub_field('mt_content'.$_SESSION["lan"]);
+		?>
+			<meta name="<?php echo $name; ?>" content="<?php echo $content; ?>"/>
+		<?php endwhile; ?>
+	<?php endif; ?>
+
 	<?php wp_head(); ?>
 
 	<link href="<?php bloginfo('template_url'); ?>/creative/less/main.less" rel="stylesheet/less">

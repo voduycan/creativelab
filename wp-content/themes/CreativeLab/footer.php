@@ -58,16 +58,7 @@
 
 		$('#submit-btn').prop('value','<?php the_field('send'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>');
 		
-		$('#label-close span.ajax-loader').removeClass('ajax-loader');
-		$('.wpcf7-form-control-wrap .wpcf7-form-control').click(function(){
-			if($('.wpcf7-form-control-wrap .wpcf7-form-control').hasClass('wpcf7-not-valid')){
-				$(this).removeClass('wpcf7-not-valid');
-			}
-		});
-		$('#label-send').click(function(){
-			$('#label-send .ajax-loader').addClass('icon-loading');
-
-		});
+		
 	</script>
 	<script src="<?php bloginfo('template_url'); ?>/creative/js/contact-form.js"></script>
 </body>
