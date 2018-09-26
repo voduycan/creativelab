@@ -565,6 +565,20 @@ function twentyseventeen_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'twentyseventeen_widget_tag_cloud_args' );
 
+
+function my_acf_admin_head() {
+    ?>
+    <style type="text/css">
+
+    	/* css hide form */
+    	#dc-form-en, #dc-form-jp{
+    		display: none;
+    	}
+    </style>
+    <?php
+}
+
+add_action('acf/input/admin_head', 'my_acf_admin_head');
 /**
  * Implement the Custom Header feature.
  */
