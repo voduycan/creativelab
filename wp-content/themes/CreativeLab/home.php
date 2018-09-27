@@ -252,12 +252,102 @@
 			
 			<!-- Featured Works -->
 			<section id="section4" data-stellar-background-ratio="0.3">
-				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section4.png" alt="" data-stellar-ratio="0.8">
+				<!-- <img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section4.png" alt="" data-stellar-ratio="0.8"> -->
+					<div class="slide">
+						<!-- Navbar -->
+						<div class="slider_nav">
+							<button class="previous"><span class="icon-right-arrow left-arrow"></span></button>
+							<button class="search"><span class="icon-magnifying-glass white"></span></button>
+							<button class="next"><span class="icon-right-arrow"></span></span></button>
+						</div>
+
+						<div class="content">
+							<!-- Apple Watch -->
+						<div class="slider" id="slider_1">
+							<div class="container">
+								<h2 class="title">
+								 	Apple Watch
+								 	<span>The Fabulous</span>
+								</h2>
+								<div class="slider_mover">
+									<div class="img-big">
+										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch.png">
+										<div class="img-small watch">
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch-content-preview.png">
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<!--End Apple Watch -->
+
+						<!-- Iphone -->
+						<div class="slider" id="slider_2">
+							<div class="container">
+								<h2 class="title">
+								 	 iPhone 6
+								 	 <span>The Classy</span>
+								</h2>
+								<div class="slider_mover">
+									<div class="img-big">
+										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone.png">
+										<div class="img-small iphone">
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone-content-preview.png">
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<!--End Iphone -->
+
+						<!-- Ipad -->
+						<div class="slider" id="slider_3">
+							<div class="container">
+								<h2 class="title">
+								 	 iPad Mini
+								 	 <span>The Fantastic</span>
+								</h2>
+								<div class="slider_mover">
+									<div class="img-big">
+										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad.png">
+										<div class="img-small ipad">
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad-content-preview.png">
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<!--End Ipad -->
+
+						<!-- Macbook -->
+						<div class="slider" id="slider_4">
+							<div class="container">
+								<h2 class="title">
+								 	 MacBook
+								 	 <span>The Amazing</span>
+								</h2>
+								<div class="slider_mover">
+									<div class="img-big">
+										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook.png">
+										<div class="img-small macbook">
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook-content-preview.jpg">
+										</div>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<!--End Macbook -->
+						</div>
+
+
+						
+						<!--End Navbar -->
+					</div>
+					<!-- End Slider -->
 				<div class="wrap">
 					
 					<h1><?php the_field('title_p5'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></h1>
 					<p><?php the_field('text_p5'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></p>
-					<a class="button primary md-trigger" data-text="<?php the_field('works_weve_done'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?>" data-modal="modal-featured-works"><span><?php the_field('works_weve_done'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span></a>
 					
 					<a class="next-btn" href="#section5">
 						<span><?php the_field('contact_us'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span>

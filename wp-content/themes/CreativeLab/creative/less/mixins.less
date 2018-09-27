@@ -255,6 +255,69 @@
     box-sizing: @box-sizing; 
 }
 
+//CSS3 animation
+//----------------------------------
+.animation(@animation) {
+  -webkit-animation: @animation;
+          animation: @animation;
+}
+
+//CSS3 translateX
+//----------------------------------
+.translateX(@x) {
+  -webkit-transform: translateX(@x);
+          transform: translateX(@x);
+}
+
+
+//CSS3 rotate
+//----------------------------------
+.rotate(@deg) {
+  -webkit-transform: rotate(@deg);
+          transform: rotate(@deg);
+}
+
+//CSS3 transition delay
+//----------------------------------
+.transition-delay(@transition-delay) {
+  -webkit-transition-delay: @transition-delay;
+          transition-delay: @transition-delay;
+}
+//CSS3 animation to right
+//----------------------------------
+@keyframes to-right{
+  0%{.translateX(0);}
+  35%{.translateX(-30px);}
+  100%{.translateX(0);}
+}
+@-webkit-keyframes to-right{
+  0%{.translateX(0);}
+  35%{.translateX(-30px);}
+  100%{.translateX(0);}
+}
+
+//CSS3 animation to left
+//----------------------------------
+@keyframes to-left{
+  0%{.translateX(0);}
+  35%{.translateX(30px);}
+  100%{.translateX(0);}
+}
+@-webkit-keyframes to-left{
+  0%{.translateX(0);}
+  35%{.translateX(30px);}
+  100%{.translateX(0);}
+}
+
+//Content open animation
+//----------------------------------
+@keyframes zoom-in{
+  0%{
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+
 // animation ajax-loading
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }

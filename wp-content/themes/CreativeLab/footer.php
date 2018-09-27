@@ -61,5 +61,6 @@
 		
 	</script>
 	<script src="<?php bloginfo('template_url'); ?>/creative/js/contact-form.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/creative/js/slider.js"></script>
 </body>
 </html>
