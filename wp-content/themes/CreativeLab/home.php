@@ -357,6 +357,82 @@
 					
 				</div>
 				
+				<!-- Content detail -->
+				<!-- Apple Watch -->
+				<div class="content-open" id="content_1">
+					<button class="close-btn"><span class="icon-close"></span></button>
+					<div class="content">
+						<div class="image-left">
+							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch-content.png">
+						</div>
+						<div class="detail">
+							<h2>The Apple Watch</h2>
+							<h3>Entirely new ways to stay in touch</h3>
+							<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
+							<p>
+								<a href="">Learn more about new ways to connect ⟶</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--End  Apple Watch -->
+				<!-- Iphone -->
+				<div class="content-open" id="content_2">
+					<button class="close-btn"><span class="icon-close"></span></button>
+					<div class="content">
+						<div class="image-left">
+							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone-content.png">
+						</div>
+						<div class="detail">
+							<h2>The iPhone 6</h2>
+							<h3>Incredible performance for powerful apps</h3>
+							<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
+							<p>
+								<a href="">Learn more about new ways to connect ⟶</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- End Iphone -->
+
+				<!-- Ipad -->
+				<div class="content-open" id="content_3">
+					<button class="close-btn"><span class="icon-close"></span></button>
+					<div class="content">
+						<div class="image-left">
+							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad-content.jpg">
+						</div>
+						<div class="detail">
+							<h2>The iPad Mini</h2>
+							<h3>Desktop-class architecture without a desktop</h3>
+							<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
+							<p>
+								<a href="">Learn more about new ways to connect ⟶</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- End Ipad -->
+
+				<!-- Macbook -->
+				<div class="content-open" id="content_4">
+					<button class="close-btn"><span class="icon-close"></span></button>
+					<div class="content">
+						<div class="image-left">
+							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook-content.jpg">
+						</div>
+						<div class="detail">
+							<h2>The MacBook</h2>
+							<h3>It's the future of the notebook</h3>
+							<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
+							<p>
+								<a href="">Learn more about new ways to connect ⟶</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- End Macbook -->
+				<!-- End Content detail -->
 			</section>
 
 			<!-- Why Choose Us -->	
