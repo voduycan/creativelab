@@ -249,27 +249,26 @@
 
 			</section>
 			
-			
 			<!-- Featured Works -->
 			<section id="section4" data-stellar-background-ratio="0.3">
 				<!-- <img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section4.png" alt="" data-stellar-ratio="0.8"> -->
 					<div class="slide">
 						<!-- Navbar -->
-						<div class="slider_nav">
-							<button class="previous"><span class="icon-right-arrow left-arrow"></span></button>
-							<button class="search"><span class="icon-magnifying-glass white"></span></button>
-							<button class="next"><span class="icon-right-arrow"></span></span></button>
+						<div class="slider-nav">
+							<span class="icon-arrow reverse" id="previous"></span>
+							<span class="icon-magnifier" id="zoom-detail"></span>
+							<span class="icon-arrow" id="next"></span>
 						</div>
 
-						<div class="content">
+						<div class="product-zoom-slider">
 							<!-- Apple Watch -->
-						<div class="slider" id="slider_1">
+						<div class="slider" id="slider-1">
 							<div class="container">
 								<h2 class="title">
 								 	Apple Watch
 								 	<span>The Fabulous</span>
 								</h2>
-								<div class="slider_mover">
+								<div class="slider-mover">
 									<div class="img-big">
 										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch.png">
 										<div class="img-small watch">
@@ -282,13 +281,13 @@
 						<!--End Apple Watch -->
 
 						<!-- Iphone -->
-						<div class="slider" id="slider_2">
+						<div class="slider" id="slider-2">
 							<div class="container">
 								<h2 class="title">
 								 	 iPhone 6
 								 	 <span>The Classy</span>
 								</h2>
-								<div class="slider_mover">
+								<div class="slider-mover">
 									<div class="img-big">
 										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone.png">
 										<div class="img-small iphone">
@@ -301,13 +300,13 @@
 						<!--End Iphone -->
 
 						<!-- Ipad -->
-						<div class="slider" id="slider_3">
+						<div class="slider" id="slider-3">
 							<div class="container">
 								<h2 class="title">
 								 	 iPad Mini
 								 	 <span>The Fantastic</span>
 								</h2>
-								<div class="slider_mover">
+								<div class="slider-mover">
 									<div class="img-big">
 										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad.png">
 										<div class="img-small ipad">
@@ -320,13 +319,13 @@
 						<!--End Ipad -->
 
 						<!-- Macbook -->
-						<div class="slider" id="slider_4">
+						<div class="slider" id="slider-4">
 							<div class="container">
 								<h2 class="title">
 								 	 MacBook
 								 	 <span>The Amazing</span>
 								</h2>
-								<div class="slider_mover">
+								<div class="slider-mover">
 									<div class="img-big">
 										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook.png">
 										<div class="img-small macbook">
@@ -359,9 +358,9 @@
 				
 				<!-- Content detail -->
 				<!-- Apple Watch -->
-				<div class="content-open" id="content_1">
-					<button class="close-btn"><span class="icon-close"></span></button>
-					<div class="content">
+				<div class="content-open" id="content-1">
+					<span class="icon-close"></span>
+					<div class="product-zoom-slider">
 						<div class="image-left">
 							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch-content.png">
 						</div>
@@ -377,9 +376,9 @@
 				</div>
 				<!--End  Apple Watch -->
 				<!-- Iphone -->
-				<div class="content-open" id="content_2">
-					<button class="close-btn"><span class="icon-close"></span></button>
-					<div class="content">
+				<div class="content-open" id="content-2">
+					<span class="icon-close"></span>
+					<div class="product-zoom-slider">
 						<div class="image-left">
 							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone-content.png">
 						</div>
@@ -396,9 +395,9 @@
 				<!-- End Iphone -->
 
 				<!-- Ipad -->
-				<div class="content-open" id="content_3">
-					<button class="close-btn"><span class="icon-close"></span></button>
-					<div class="content">
+				<div class="content-open" id="content-3">
+					<span class="icon-close"></span>
+					<div class="product-zoom-slider">
 						<div class="image-left">
 							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad-content.jpg">
 						</div>
@@ -415,9 +414,9 @@
 				<!-- End Ipad -->
 
 				<!-- Macbook -->
-				<div class="content-open" id="content_4">
-					<button class="close-btn"><span class="icon-close"></span></button>
-					<div class="content">
+				<div class="content-open" id="content-4">
+					<span class="icon-close"></span>
+					<div class="product-zoom-slider">
 						<div class="image-left">
 							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook-content.jpg">
 						</div>

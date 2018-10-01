@@ -106,8 +106,12 @@
 
 			<a class="md-trigger" data-modal="modal-contact"><?php the_field('contact'.$_SESSION["lan"], 'options'); ?></a>
 			<div class="lang-div">
-				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en"><span class="icon-america lang-font"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span></span></a>
-				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp"><span class="icon-japan lang-font"><span class="path1"></span><span class="path2"></span></span></a>
+				<a href="<?php bloginfo('url'); ?>?lang=en" class="lang-btn lang-en">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/america.svg">
+				</a>
+				<a href="<?php bloginfo('url'); ?>?lang=jp" class="lang-btn lang-jp">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/japan.svg">
+				</a>
 			</div>
 		</nav>
 		
