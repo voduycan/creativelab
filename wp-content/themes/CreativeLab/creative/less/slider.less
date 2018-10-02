@@ -16,8 +16,11 @@
 	    font-family: @font-family-title;
 	    .slider-nav{
     	    height: 2em;
+	        margin-bottom: 0.5em;
     	    span{
     	    	margin: 0 1em;
+	    	    cursor: pointer;
+	    	    box-sizing: border-box;
     	    	.transition(all 0.1s ease-in-out);
     	    }
     	    .reverse{
@@ -52,23 +55,23 @@
 			    visibility: hidden;
 				.container{
 					height: 100%;
-					h2.title{
+					.title{
 						font-weight: 500;
 						font-family: @font-family-title;
 						color: @color-black;
 						font-size: @font-size-base + 10;
 						text-transform: capitalize;
-						.transition(all 0.5s ease-in-out);
+						.transition(all 0.7s ease-in-out);
 						span{
 							display: block;
 							font-size: @font-size-base - 3;
 							text-transform: uppercase;
 							.opacity(0.5);
 						}
-						
 					}
 					.slider-mover{
-						.transition(all 0.4s ease-in-out);
+						.transition(all 0.5s ease-in-out);
+						background: transparent;
 						.img-big{
 						    width: fit-content;
 						    width: -moz-fit-content;
@@ -89,8 +92,10 @@
 							    position: absolute;
 							    display: flex;
 	    						overflow: hidden;
+	    						background: @color-black;
+	    						
 								img{
-									.transition(all 0.4s ease-in-out);
+									.transition(all 0.3s ease-in-out);
 									.opacity(1);
 								    margin-left: 0;
 								    width: auto;
@@ -118,12 +123,10 @@
 						.macbook{
 						    top: 21.5%;
     						left: 12%;
-    						img{
-    							@media all and (max-width: 375px){
-								    width: 89% !important;
-    								height: 90% !important;
-    							}
-    						}
+    						@media all and (max-width: 375px){
+						        width: 76%;
+								height: 55%;
+							}
 						}
 					}
 				}
@@ -141,13 +144,12 @@
 	    background-color: @bg-color;
         display: flex;
 	    align-items: center;
-	    padding: 2em;
 	    box-sizing: border-box;
 	    visibility: hidden;
 	    	.icon-close{
     		    position: absolute;
 			    top: 2em;
-			    right: 1em;
+			    right: 2em;
 			    font-size: 1.2em;
 			    .opacity(0.5);
 			    color: @color-white;
@@ -160,6 +162,12 @@
 	    .product-zoom-slider{
 	    	position: relative;
 	    	display: flex;
+    	    height: 100vh;
+		    width: 100%;
+		    overflow: hidden;
+		    overflow-y: scroll;
+		    padding: 2em;
+		    align-items: center;
 	    	.image-left{
 	    		.transition(all 0.4s ease-in-out);
 	    		.translate3d(-100%,0,0);
@@ -186,7 +194,6 @@
 	    		padding-left: 3em;
 			    display: flex;
 			    flex-direction: column;
-			    justify-content: center;
 			    h2{
 				    font-size: 3em;
 				    font-weight: normal;
@@ -209,11 +216,10 @@
 	    	}
 	    	@media all and (max-width: 767px){
     		    flex-direction: column;
-    		    .image-left{
-    		    	margin-bottom: 2em;
-    		    }
+    		    
     		    .detail{
     		    	padding-left: 0;
+    		    	margin-top: 2em;
     		    	h2{
     		    		font-size: 2em;
     		    	}
@@ -249,10 +255,14 @@
 		.slider-mover{
 			.transform(translateX(0) rotate(0));
 			.opacity(1);
-			.animation(to-left 0.4s ease-in-out 0.4s);
 		}
 	}
 
+	.to-left{
+		.slider-mover{
+			.animation(to-left 0.3s ease-in-out);
+		}
+	}
 	.translate-center-right{
 	   .title{
 	    	.translateX(0);
@@ -261,7 +271,12 @@
 		.slider-mover{
 			.transform(translateX(0) rotate(0));
 			.opacity(1);
-			.animation(to-right 0.4s ease-in-out 0.4s);
+		}
+	}
+
+	.to-right{
+		.slider-mover{
+			.animation(to-right 0.3s ease-in-out);
 		}
 	}
 
@@ -283,7 +298,8 @@
 	.zoom-in{
 		.container{
 			.title{
-
+				.transform(translate3d(0, -100%, 0) scale3d(2, 2, 1));
+				.opacity(0);
 			}
 			.slider-mover{
 				.img-big{

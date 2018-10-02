@@ -177,6 +177,83 @@
 			</div>
 		</div> <!-- .md-modal -->
 		
+		<!-- Content detail -->
+		<!-- Apple Watch -->
+		<div class="content-open" id="content-1">
+			<span class="icon-close"></span>
+			<div class="product-zoom-slider">
+				<div class="image-left">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch-content.png">
+				</div>
+				<div class="detail">
+					<h2>The Apple Watch</h2>
+					<h3>Entirely new ways to stay in touch</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
+					<p>
+						<a href="">Learn more about new ways to connect ⟶</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!--End  Apple Watch -->
+		<!-- Iphone -->
+		<div class="content-open" id="content-2">
+			<span class="icon-close"></span>
+			<div class="product-zoom-slider">
+				<div class="image-left">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone-content.png">
+				</div>
+				<div class="detail">
+					<h2>The iPhone 6</h2>
+					<h3>Incredible performance for powerful apps</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
+					<p>
+						<a href="">Learn more about new ways to connect ⟶</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- End Iphone -->
+
+		<!-- Ipad -->
+		<div class="content-open" id="content-3">
+			<span class="icon-close"></span>
+			<div class="product-zoom-slider">
+				<div class="image-left">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad-content.jpg">
+				</div>
+				<div class="detail">
+					<h2>The iPad Mini</h2>
+					<h3>Desktop-class architecture without a desktop</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
+					<p>
+						<a href="">Learn more about new ways to connect ⟶</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- End Ipad -->
+
+		<!-- Macbook -->
+		<div class="content-open" id="content-4">
+			<span class="icon-close"></span>
+			<div class="product-zoom-slider">
+				<div class="image-left">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook-content.jpg">
+				</div>
+				<div class="detail">
+					<h2>The MacBook</h2>
+					<h3>It's the future of the notebook</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
+					<p>
+						<a href="">Learn more about new ways to connect ⟶</a>
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- End Macbook -->
+		<!-- End Content detail -->
+		
 		<div class="md-overlay"></div> <!-- !Important. The overlay modal element -->
 			
 		<div id="main-story">
@@ -251,8 +328,7 @@
 			
 			<!-- Featured Works -->
 			<section id="section4" data-stellar-background-ratio="0.3">
-				<!-- <img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section4.png" alt="" data-stellar-ratio="0.8"> -->
-					<div class="slide">
+					<div class="slide" data-stellar-ratio="0.8">
 						<!-- Navbar -->
 						<div class="slider-nav">
 							<span class="icon-arrow reverse" id="previous"></span>
@@ -356,82 +432,7 @@
 					
 				</div>
 				
-				<!-- Content detail -->
-				<!-- Apple Watch -->
-				<div class="content-open" id="content-1">
-					<span class="icon-close"></span>
-					<div class="product-zoom-slider">
-						<div class="image-left">
-							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch-content.png">
-						</div>
-						<div class="detail">
-							<h2>The Apple Watch</h2>
-							<h3>Entirely new ways to stay in touch</h3>
-							<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
-							<p>
-								<a href="">Learn more about new ways to connect ⟶</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<!--End  Apple Watch -->
-				<!-- Iphone -->
-				<div class="content-open" id="content-2">
-					<span class="icon-close"></span>
-					<div class="product-zoom-slider">
-						<div class="image-left">
-							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone-content.png">
-						</div>
-						<div class="detail">
-							<h2>The iPhone 6</h2>
-							<h3>Incredible performance for powerful apps</h3>
-							<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
-							<p>
-								<a href="">Learn more about new ways to connect ⟶</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<!-- End Iphone -->
-
-				<!-- Ipad -->
-				<div class="content-open" id="content-3">
-					<span class="icon-close"></span>
-					<div class="product-zoom-slider">
-						<div class="image-left">
-							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad-content.jpg">
-						</div>
-						<div class="detail">
-							<h2>The iPad Mini</h2>
-							<h3>Desktop-class architecture without a desktop</h3>
-							<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
-							<p>
-								<a href="">Learn more about new ways to connect ⟶</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<!-- End Ipad -->
-
-				<!-- Macbook -->
-				<div class="content-open" id="content-4">
-					<span class="icon-close"></span>
-					<div class="product-zoom-slider">
-						<div class="image-left">
-							<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook-content.jpg">
-						</div>
-						<div class="detail">
-							<h2>The MacBook</h2>
-							<h3>It's the future of the notebook</h3>
-							<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
-							<p>
-								<a href="">Learn more about new ways to connect ⟶</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<!-- End Macbook -->
-				<!-- End Content detail -->
+				
 			</section>
 
 			<!-- Why Choose Us -->	
