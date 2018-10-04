@@ -180,78 +180,80 @@
 		<!-- Content detail -->
 		<!-- Apple Watch -->
 		<div class="content-open" id="content-1">
-			<span class="icon-close"></span>
 			<div class="product-zoom-slider">
 				<div class="image-left">
-					<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch-content.png">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
 				</div>
 				<div class="detail">
-					<h2>The Apple Watch</h2>
-					<h3>Entirely new ways to stay in touch</h3>
-					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
-					<p>
-						<a href="">Learn more about new ways to connect ⟶</a>
-					</p>
+					<h2>klamr</h2>
+					<h3>mobile application</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
+					<div class="description">
+						<span class="icon-project-management"></span>
+						<p class="content">Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch.</p>
+					</div>
+					<a class="button primary btn-close-slide" data-text="close" data-modal="modal-services"><span>close</span></a>
 				</div>
 			</div>
 		</div>
 		<!--End  Apple Watch -->
-		<!-- Iphone -->
+		<!-- Apple Watch -->
 		<div class="content-open" id="content-2">
-			<span class="icon-close"></span>
 			<div class="product-zoom-slider">
 				<div class="image-left">
-					<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone-content.png">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
 				</div>
 				<div class="detail">
-					<h2>The iPhone 6</h2>
-					<h3>Incredible performance for powerful apps</h3>
-					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
-					<p>
-						<a href="">Learn more about new ways to connect ⟶</a>
-					</p>
+					<h2>klamr</h2>
+					<h3>mobile application</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
+					<div class="description">
+						<span class="icon-project-management"></span>
+						<p class="content">Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch.</p>
+					</div>
+					<a class="button primary btn-close-slide" data-text="close" data-modal="modal-services"><span>close</span></a>
 				</div>
 			</div>
 		</div>
-		<!-- End Iphone -->
-
-		<!-- Ipad -->
+		<!--End  Apple Watch -->
+		<!-- Apple Watch -->
 		<div class="content-open" id="content-3">
-			<span class="icon-close"></span>
 			<div class="product-zoom-slider">
 				<div class="image-left">
-					<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad-content.jpg">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
 				</div>
 				<div class="detail">
-					<h2>The iPad Mini</h2>
-					<h3>Desktop-class architecture without a desktop</h3>
-					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
-					<p>
-						<a href="">Learn more about new ways to connect ⟶</a>
-					</p>
+					<h2>klamr</h2>
+					<h3>mobile application</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
+					<div class="description">
+						<span class="icon-project-management"></span>
+						<p class="content">Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch.</p>
+					</div>
+					<a class="button primary btn-close-slide" data-text="close" data-modal="modal-services"><span>close</span></a>
 				</div>
 			</div>
 		</div>
-		<!-- End Ipad -->
-
-		<!-- Macbook -->
+		<!--End  Apple Watch -->
+		<!-- Apple Watch -->
 		<div class="content-open" id="content-4">
-			<span class="icon-close"></span>
 			<div class="product-zoom-slider">
 				<div class="image-left">
-					<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook-content.jpg">
+					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
 				</div>
 				<div class="detail">
-					<h2>The MacBook</h2>
-					<h3>It's the future of the notebook</h3>
-					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message. Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch, or even your heartbeat.</p>
-					<p>
-						<a href="">Learn more about new ways to connect ⟶</a>
-					</p>
+					<h2>klamr</h2>
+					<h3>mobile application</h3>
+					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
+					<div class="description">
+						<span class="icon-project-management"></span>
+						<p class="content">Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch.</p>
+					</div>
+					<a class="button primary btn-close-slide" data-text="close" data-modal="modal-services"><span>close</span></a>
 				</div>
 			</div>
 		</div>
-		<!-- End Macbook -->
+		<!--End  Apple Watch -->
 		<!-- End Content detail -->
 		
 		<div class="md-overlay"></div> <!-- !Important. The overlay modal element -->
@@ -335,88 +337,86 @@
 							<span class="icon-magnifier" id="zoom-detail"></span>
 							<span class="icon-arrow" id="next"></span>
 						</div>
+						<!--End Navbar -->
 
 						<div class="product-zoom-slider">
 							<!-- Apple Watch -->
-						<div class="slider" id="slider-1">
-							<div class="container">
-								<h2 class="title">
-								 	Apple Watch
-								 	<span>The Fabulous</span>
-								</h2>
-								<div class="slider-mover">
-									<div class="img-big">
-										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch.png">
-										<div class="img-small watch">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/png/apple-watch-content-preview.png">
+							<div class="slider" id="slider-1">
+								<div class="container">
+									<h2 class="title">
+									 	klamr app
+									 	<span>mobile application</span>
+									</h2>
+									<div class="slider-mover">
+										<div class="img-big">
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
+											<div class="img-small watch">
+												<div class="background-img">1</div>
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>	
-						</div>
-						<!--End Apple Watch -->
+								</div>	
+							</div>
+							<!--End Apple Watch -->
 
-						<!-- Iphone -->
-						<div class="slider" id="slider-2">
-							<div class="container">
-								<h2 class="title">
-								 	 iPhone 6
-								 	 <span>The Classy</span>
-								</h2>
-								<div class="slider-mover">
-									<div class="img-big">
-										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone.png">
-										<div class="img-small iphone">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/png/iphone-content-preview.png">
+							<!-- Apple Watch -->
+							<div class="slider" id="slider-2">
+								<div class="container">
+									<h2 class="title">
+									 	klamr app
+									 	<span>mobile application</span>
+									</h2>
+									<div class="slider-mover">
+										<div class="img-big">
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
+											<div class="img-small iphone">
+												<div class="background-img">2</div>
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>	
-						</div>
-						<!--End Iphone -->
+								</div>	
+							</div>
+							<!--End Apple Watch -->
 
-						<!-- Ipad -->
-						<div class="slider" id="slider-3">
-							<div class="container">
-								<h2 class="title">
-								 	 iPad Mini
-								 	 <span>The Fantastic</span>
-								</h2>
-								<div class="slider-mover">
-									<div class="img-big">
-										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad.png">
-										<div class="img-small ipad">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/png/ipad-content-preview.png">
+							<!-- Apple Watch -->
+							<div class="slider" id="slider-3">
+								<div class="container">
+									<h2 class="title">
+									 	klamr app
+									 	<span>mobile application</span>
+									</h2>
+									<div class="slider-mover">
+										<div class="img-big">
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
+											<div class="img-small macbook">
+												<div class="background-img">3</div>
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>	
-						</div>
-						<!--End Ipad -->
-
-						<!-- Macbook -->
-						<div class="slider" id="slider-4">
-							<div class="container">
-								<h2 class="title">
-								 	 MacBook
-								 	 <span>The Amazing</span>
-								</h2>
-								<div class="slider-mover">
-									<div class="img-big">
-										<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook.png">
-										<div class="img-small macbook">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/png/macbook-content-preview.jpg">
+								</div>	
+							</div>
+							<!--End Apple Watch -->
+							<!-- Apple Watch -->
+							<div class="slider" id="slider-4">
+								<div class="container">
+									<h2 class="title">
+									 	klamr app
+									 	<span>mobile application</span>
+									</h2>
+									<div class="slider-mover">
+										<div class="img-big">
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
+											<div class="img-small imac">
+												<div class="background-img">4</div>
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>	
+								</div>	
+							</div>
+							<!--End Apple Watch -->
 						</div>
-						<!--End Macbook -->
-						</div>
-
 
 						
-						<!--End Navbar -->
 					</div>
 					<!-- End Slider -->
 				<div class="wrap">

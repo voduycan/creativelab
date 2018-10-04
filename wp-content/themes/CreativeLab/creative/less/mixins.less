@@ -275,35 +275,64 @@
   -webkit-transition-delay: @transition-delay;
           transition-delay: @transition-delay;
 }
+
 //CSS3 animation to right
 //----------------------------------
-@keyframes to-right{
-  0%{.translateX(0);}
-  35%{.translateX(-30px);}
-  100%{.translateX(0);}
+@keyframes right-to-center{
+  0%{.transform(translateX(90%) rotate(20deg));.opacity(0);}
+  40%{.transform(translateX(-40px) rotate(0)); .opacity(1);}
+  100%{.transform(translateX(0));}
 }
-@-webkit-keyframes to-right{
-  0%{.translateX(0);}
-  35%{.translateX(-30px);}
-  100%{.translateX(0);}
+@-webkit-keyframes right-to-center{
+  0%{.transform(translateX(90%) rotate(20deg));.opacity(0);}
+  40%{.transform(translateX(-40px) rotate(0));.opacity(1);}
+  100%{.transform(translateX(0));}
 }
 
 //CSS3 animation to left
 //----------------------------------
-@keyframes to-left{
-  0%{.translateX(0);}
-  35%{.translateX(30px);}
-  100%{.translateX(0);}
+@keyframes left-to-center{
+  0%{.transform(translateX(-90%) rotate(-20deg));.opacity(0);}
+  40%{.transform(translateX(40px) rotate(0)); .opacity(1);}
+  100%{.transform(translateX(0));}
 }
-@-webkit-keyframes to-left{
-  0%{.translateX(0);}
-  35%{.translateX(30px);}
-  100%{.translateX(0);}
+@-webkit-keyframes left-to-center{
+  0%{.transform(translateX(-90%) rotate(-20deg));.opacity(0);}
+  40%{.transform(translateX(40px) rotate(0));.opacity(1);}
+  100%{.transform(translateX(0));}
+}
+
+//CSS3 animation translate right
+//----------------------------------
+@keyframes tran-right{
+  0%{.transform(translateX(0) rotate(0)); .opacity(1);}
+  100%{.transform(translateX(90%) rotate(20deg)); .opacity(0);}
+}
+@-webkit-keyframes tran-right{
+  0%{.transform(translateX(0) rotate(0));.opacity(1);}
+  100%{.transform(translateX(90%) rotate(20deg)); .opacity(0);}
+}
+
+//CSS3 animation translate left
+//----------------------------------
+@keyframes tran-left{
+  0%{.transform(translateX(0) rotate(0));.opacity(1);}
+  100%{.transform(translateX(-90%) rotate(-20deg)); .opacity(0);}
+}
+@-webkit-keyframes tran-left{
+  0%{.transform(translateX(0) rotate(0));.opacity(1);}
+  100%{.transform(translateX(-90%) rotate(-20deg)); .opacity(0);}
 }
 
 //Content open animation
 //----------------------------------
 @keyframes zoom-in{
+  0%{
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+@-webkit-keyframes zoom-in{
   0%{
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
     transform: scale3d(0.3, 0.3, 0.3);
