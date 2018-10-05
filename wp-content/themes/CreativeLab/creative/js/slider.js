@@ -1,6 +1,6 @@
 $(function() {
 	var i = 1;
-	var n = 4;
+	var n = 3;
 	var curent = n;
 	var near = i + 1;
 	var flag = false;
@@ -79,21 +79,22 @@ $(function() {
 	$('#zoom-detail').click(function(){
 		$('.slide .zoom-in').removeClass('zoom-in');
 		$('#slider-' + i).addClass('zoom-in');
-		$('#slider-' + i).removeClass('delay');
+		$('#slider-' + i).removeClass('delay-after');
+		$('#slider-' + i).addClass('delay-before');
 		setTimeout(function(){
 			$('#content-' + i).addClass('show');
 			$('#content-' + i).css('visibility', 'visible');
-		}, 0.45*1000);
+		}, 0.5*1000);
 	});
 
 	//Click Close button
 	$('.btn-close-slide').click(function(){
 		$('#content-' + i).removeClass('show');
-		$('#slider-' + i).addClass('delay');
+		$('#slider-' + i).removeClass('delay-before');
+		$('#slider-' + i).addClass('delay-after');
 		setTimeout(function(){
 			$('#slider-' + i).removeClass('zoom-in');
-			$('#slider-' + i).removeClass('delay');
 			$('#content-' + i).css('visibility', 'hidden');
-		}, 0.4 * 1000);
+		}, 0.5 * 1000);
 	});
 });

@@ -276,29 +276,43 @@
           transition-delay: @transition-delay;
 }
 
-//CSS3 animation to right
+//CSS3 animation duration
+//----------------------------------
+.animation-duration(@animation-duration){
+   -webkit-animation-duration: @animation-duration;
+   animation-duration: @animation-duration;
+}
+
+//CSS3 transition duration
+//----------------------------------
+.transition-duration(@transition-duration){
+   -webkit-transition-duration: @transition-duration;
+   transition-duration: @transition-duration;
+}
+
+//CSS3 animation right-to-center
 //----------------------------------
 @keyframes right-to-center{
   0%{.transform(translateX(90%) rotate(20deg));.opacity(0);}
-  40%{.transform(translateX(-40px) rotate(0)); .opacity(1);}
+  70%{.transform(translateX(-40px) rotate(0)); .opacity(1);}
   100%{.transform(translateX(0));}
 }
 @-webkit-keyframes right-to-center{
   0%{.transform(translateX(90%) rotate(20deg));.opacity(0);}
-  40%{.transform(translateX(-40px) rotate(0));.opacity(1);}
+  70%{.transform(translateX(-40px) rotate(0));.opacity(1);}
   100%{.transform(translateX(0));}
 }
 
-//CSS3 animation to left
+//CSS3 animation left-to-center
 //----------------------------------
 @keyframes left-to-center{
   0%{.transform(translateX(-90%) rotate(-20deg));.opacity(0);}
-  40%{.transform(translateX(40px) rotate(0)); .opacity(1);}
+  70%{.transform(translateX(40px) rotate(0)); .opacity(1);}
   100%{.transform(translateX(0));}
 }
 @-webkit-keyframes left-to-center{
   0%{.transform(translateX(-90%) rotate(-20deg));.opacity(0);}
-  40%{.transform(translateX(40px) rotate(0));.opacity(1);}
+  70%{.transform(translateX(40px) rotate(0));.opacity(1);}
   100%{.transform(translateX(0));}
 }
 

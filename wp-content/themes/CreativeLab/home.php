@@ -331,16 +331,16 @@
 			<!-- Featured Works -->
 			<section id="section4" data-stellar-background-ratio="0.3">
 					<div class="slide" data-stellar-ratio="0.8">
-						<!-- Navbar -->
-						<div class="slider-nav">
-							<span class="icon-arrow reverse" id="previous"></span>
-							<span class="icon-magnifier" id="zoom-detail"></span>
-							<span class="icon-arrow" id="next"></span>
-						</div>
-						<!--End Navbar -->
-
-						<div class="product-zoom-slider">
-							<!-- Apple Watch -->
+						
+						<div class="product-slider">
+							<!-- Slider controller -->
+							<div class="slider-nav">
+								<span class="icon-arrow reverse" id="previous"></span>
+								<span class="icon-magnifier" id="zoom-detail"></span>
+								<span class="icon-arrow" id="next"></span>
+							</div>
+							<!--End Slider controller -->
+							<!-- Iphone -->
 							<div class="slider" id="slider-1">
 								<div class="container">
 									<h2 class="title">
@@ -350,16 +350,15 @@
 									<div class="slider-mover">
 										<div class="img-big">
 											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
-											<div class="img-small watch">
-												<div class="background-img">1</div>
+											<div class="img-small iphone">
+												<div class="background-img"></div>
 											</div>
 										</div>
 									</div>
 								</div>	
 							</div>
-							<!--End Apple Watch -->
-
-							<!-- Apple Watch -->
+							<!--End Iphone -->
+							<!-- Ipad -->
 							<div class="slider" id="slider-2">
 								<div class="container">
 									<h2 class="title">
@@ -368,9 +367,9 @@
 									</h2>
 									<div class="slider-mover">
 										<div class="img-big">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
-											<div class="img-small iphone">
-												<div class="background-img">2</div>
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/ipad-wireframe.svg">
+											<div class="img-small ipad">
+												<div class="background-img"></div>
 											</div>
 										</div>
 									</div>
@@ -378,7 +377,7 @@
 							</div>
 							<!--End Apple Watch -->
 
-							<!-- Apple Watch -->
+							<!-- Apple macbook -->
 							<div class="slider" id="slider-3">
 								<div class="container">
 									<h2 class="title">
@@ -389,31 +388,13 @@
 										<div class="img-big">
 											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
 											<div class="img-small macbook">
-												<div class="background-img">3</div>
+												<div class="background-img"></div>
 											</div>
 										</div>
 									</div>
 								</div>	
 							</div>
-							<!--End Apple Watch -->
-							<!-- Apple Watch -->
-							<div class="slider" id="slider-4">
-								<div class="container">
-									<h2 class="title">
-									 	klamr app
-									 	<span>mobile application</span>
-									</h2>
-									<div class="slider-mover">
-										<div class="img-big">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
-											<div class="img-small imac">
-												<div class="background-img">4</div>
-											</div>
-										</div>
-									</div>
-								</div>	
-							</div>
-							<!--End Apple Watch -->
+							<!--End macbook -->
 						</div>
 
 						
