@@ -185,7 +185,7 @@
 					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
 				</div>
 				<div class="detail">
-					<h2>klamr</h2>
+					<h2>klamr1</h2>
 					<h3>mobile application</h3>
 					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
 					<div class="description">
@@ -204,7 +204,7 @@
 					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
 				</div>
 				<div class="detail">
-					<h2>klamr</h2>
+					<h2>klamr2</h2>
 					<h3>mobile application</h3>
 					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
 					<div class="description">
@@ -223,7 +223,7 @@
 					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
 				</div>
 				<div class="detail">
-					<h2>klamr</h2>
+					<h2>klamr3</h2>
 					<h3>mobile application</h3>
 					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
 					<div class="description">
@@ -242,7 +242,7 @@
 					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
 				</div>
 				<div class="detail">
-					<h2>klamr</h2>
+					<h2>klamr4</h2>
 					<h3>mobile application</h3>
 					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
 					<div class="description">
@@ -344,7 +344,7 @@
 							<div class="slider" id="slider-1">
 								<div class="container">
 									<h2 class="title">
-									 	klamr app
+									 	klamr app 1
 									 	<span>mobile application</span>
 									</h2>
 									<div class="slider-mover">
@@ -362,7 +362,7 @@
 							<div class="slider" id="slider-2">
 								<div class="container">
 									<h2 class="title">
-									 	klamr app
+									 	klamr app 2
 									 	<span>mobile application</span>
 									</h2>
 									<div class="slider-mover">
@@ -375,13 +375,13 @@
 									</div>
 								</div>	
 							</div>
-							<!--End Apple Watch -->
+							<!--End ipad -->
 
 							<!-- Apple macbook -->
 							<div class="slider" id="slider-3">
 								<div class="container">
 									<h2 class="title">
-									 	klamr app
+									 	klamr app 3
 									 	<span>mobile application</span>
 									</h2>
 									<div class="slider-mover">
@@ -395,6 +395,25 @@
 								</div>	
 							</div>
 							<!--End macbook -->
+
+							<!-- Apple imac -->
+							<div class="slider" id="slider-4">
+								<div class="container">
+									<h2 class="title">
+									 	klamr app 4
+									 	<span>mobile application</span>
+									</h2>
+									<div class="slider-mover">
+										<div class="img-big">
+											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
+											<div class="img-small macbook">
+												<div class="background-img"></div>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</div>
+							<!--End imac -->
 						</div>
 
 						
