@@ -177,83 +177,48 @@
 			</div>
 		</div> <!-- .md-modal -->
 		
+
+		<script> var pro = 0;</script>
 		<!-- Content detail -->
-		<!-- Apple Watch -->
-		<div class="content-open" id="content-1">
-			<div class="product-zoom-slider">
-				<div class="image-left">
-					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
-				</div>
-				<div class="detail">
-					<h2>klamr1</h2>
-					<h3>mobile application</h3>
-					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
-					<div class="description">
-						<span class="icon-project-management"></span>
-						<p class="content">Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch.</p>
+		<?php if( have_rows('pro_product'.$_SESSION["lan"], get_field('featured_works',$post->ID))): $pro_p = 0;  ?>
+
+			<?php while( have_rows('pro_product'.$_SESSION["lan"], get_field('featured_works',$post->ID)) ): the_row(); 
+
+				// vars
+				$image_content = get_sub_field('pro_image_content'.$_SESSION["lan"]);
+				$title = get_sub_field('pro_title'.$_SESSION["lan"]);
+				$text = get_sub_field('pro_text'.$_SESSION["lan"]);
+				$detail = get_sub_field('pro_detail'.$_SESSION["lan"]);
+				$scope = get_sub_field('pro_scope'.$_SESSION["lan"]);
+				$pro_p++;
+
+			?>
+			<script> pro++; </script>
+
+				<div class="content-open" id="content-<?php echo $pro_p; ?>">
+					<div class="product-zoom-slider">
+						<div class="image-left">
+							<img src="<?php echo $image_content; ?>">
+						</div>
+						<div class="detail">
+							<h2><?php echo $title; ?></h2>
+							<h3><?php echo $text; ?></h3>
+							<div class="content-detail">
+								<p><?php echo $detail; ?></p>
+								<div class="description">
+									<span class="icon-project-management"></span>
+									<p class="content"><?php echo $scope; ?></p>
+								</div>
+							</div>
+							<a class="button primary btn-close-slide" data-text="<?php the_field('pro_button_close'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?>">
+								<span><?php the_field('pro_button_close'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span>
+							</a>
+						</div>
 					</div>
-					<a class="button primary btn-close-slide" data-text="close" data-modal="modal-services"><span>close</span></a>
 				</div>
-			</div>
-		</div>
-		<!--End  Apple Watch -->
-		<!-- Apple Watch -->
-		<div class="content-open" id="content-2">
-			<div class="product-zoom-slider">
-				<div class="image-left">
-					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
-				</div>
-				<div class="detail">
-					<h2>klamr2</h2>
-					<h3>mobile application</h3>
-					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
-					<div class="description">
-						<span class="icon-project-management"></span>
-						<p class="content">Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch.</p>
-					</div>
-					<a class="button primary btn-close-slide" data-text="close" data-modal="modal-services"><span>close</span></a>
-				</div>
-			</div>
-		</div>
-		<!--End  Apple Watch -->
-		<!-- Apple Watch -->
-		<div class="content-open" id="content-3">
-			<div class="product-zoom-slider">
-				<div class="image-left">
-					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
-				</div>
-				<div class="detail">
-					<h2>klamr3</h2>
-					<h3>mobile application</h3>
-					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
-					<div class="description">
-						<span class="icon-project-management"></span>
-						<p class="content">Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch.</p>
-					</div>
-					<a class="button primary btn-close-slide" data-text="close" data-modal="modal-services"><span>close</span></a>
-				</div>
-			</div>
-		</div>
-		<!--End  Apple Watch -->
-		<!-- Apple Watch -->
-		<div class="content-open" id="content-4">
-			<div class="product-zoom-slider">
-				<div class="image-left">
-					<img src="<?php bloginfo('template_url'); ?>/creative/images/jpg/iphone-klamr-content.jpg">
-				</div>
-				<div class="detail">
-					<h2>klamr4</h2>
-					<h3>mobile application</h3>
-					<p>Apple Watch makes all the ways you're used to communicating more convenient. And because it sits right on your wrist, it can add a physical dimension to alerts and notifications. For example, you’ll feel a gentle tap with each incoming message.</p>
-					<div class="description">
-						<span class="icon-project-management"></span>
-						<p class="content">Apple Watch also lets you connect with your favorite people in fun, spontaneous ways — like sending a tap, a sketch.</p>
-					</div>
-					<a class="button primary btn-close-slide" data-text="close" data-modal="modal-services"><span>close</span></a>
-				</div>
-			</div>
-		</div>
-		<!--End  Apple Watch -->
+			<?php endwhile; ?>
+		<?php endif; ?>
+
 		<!-- End Content detail -->
 		
 		<div class="md-overlay"></div> <!-- !Important. The overlay modal element -->
@@ -330,95 +295,104 @@
 			
 			<!-- Featured Works -->
 			<section id="section4" data-stellar-background-ratio="0.3">
-					<div class="slide" data-stellar-ratio="0.8">
+				<div class="slide" data-stellar-ratio="0.8">
+					
+					<div class="product-slider">
 						
-						<div class="product-slider">
-							<!-- Slider controller -->
-							<div class="slider-nav">
-								<span class="icon-arrow reverse" id="previous"></span>
-								<span class="icon-magnifier" id="zoom-detail"></span>
-								<span class="icon-arrow" id="next"></span>
-							</div>
-							<!--End Slider controller -->
-							<!-- Iphone -->
-							<div class="slider" id="slider-1">
-								<div class="container">
-									<h2 class="title">
-									 	klamr app 1
-									 	<span>mobile application</span>
-									</h2>
-									<div class="slider-mover">
-										<div class="img-big">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
-											<div class="img-small iphone">
-												<div class="background-img"></div>
-											</div>
-										</div>
-									</div>
-								</div>	
-							</div>
-							<!--End Iphone -->
-							<!-- Ipad -->
-							<div class="slider" id="slider-2">
-								<div class="container">
-									<h2 class="title">
-									 	klamr app 2
-									 	<span>mobile application</span>
-									</h2>
-									<div class="slider-mover">
-										<div class="img-big">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/ipad-wireframe.svg">
-											<div class="img-small ipad">
-												<div class="background-img"></div>
-											</div>
-										</div>
-									</div>
-								</div>	
-							</div>
-							<!--End ipad -->
+						<?php if( have_rows('pro_product'.$_SESSION["lan"], get_field('featured_works',$post->ID))): $pro_2 = 0;  ?>
 
-							<!-- Apple macbook -->
-							<div class="slider" id="slider-3">
-								<div class="container">
-									<h2 class="title">
-									 	klamr app 3
-									 	<span>mobile application</span>
-									</h2>
-									<div class="slider-mover">
-										<div class="img-big">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
-											<div class="img-small macbook">
-												<div class="background-img"></div>
-											</div>
-										</div>
-									</div>
-								</div>	
-							</div>
-							<!--End macbook -->
-
-							<!-- Apple imac -->
-							<div class="slider" id="slider-4">
-								<div class="container">
-									<h2 class="title">
-									 	klamr app 4
-									 	<span>mobile application</span>
-									</h2>
-									<div class="slider-mover">
-										<div class="img-big">
-											<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
-											<div class="img-small macbook">
-												<div class="background-img"></div>
-											</div>
-										</div>
-									</div>
-								</div>	
-							</div>
-							<!--End imac -->
+						<!-- Slider controller -->
+						<div class="slider-nav">
+							<span class="icon-arrow reverse" id="previous"></span>
+							<span class="icon-magnifier" id="zoom-detail"></span>
+							<span class="icon-arrow" id="next"></span>
 						</div>
+						<!--End Slider controller -->
 
-						
+							<?php while( have_rows('pro_product'.$_SESSION["lan"], get_field('featured_works',$post->ID)) ): the_row(); 
+
+								// vars
+								$image_preview = get_sub_field('pro_image_preview'.$_SESSION["lan"]);
+								$title = get_sub_field('pro_title'.$_SESSION["lan"]);
+								$text = get_sub_field('pro_text'.$_SESSION["lan"]);
+								$pro_select = get_sub_field('pro_select'.$_SESSION["lan"]);
+								$pro_2++;
+							?>
+								<?php if($pro_select == 1): ?>
+									<!-- Iphone -->
+									<div class="slider" id="slider-<?php echo $pro_2; ?>">
+										<div class="container my-iphone">
+											<h2 class="title">
+											 	<?php echo $title; ?>
+											 	<span><?php echo $text; ?></span>
+											</h2>
+											<div class="slider-mover">
+												<div class="img-big">
+													<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
+													<div class="img-small iphone">
+														<div class="background-img" 
+															style="background-image: url('<?php echo $image_preview; ?>')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>	
+									</div>
+									<!--End Iphone -->
+								<?php endif; ?>
+
+								<?php if($pro_select == 2): ?>
+									<!-- Ipad -->
+									<div class="slider" id="slider-<?php echo $pro_2; ?>">
+										<div class="container my-ipad">
+											<h2 class="title">
+											 	<?php echo $title; ?>
+											 	<span><?php echo $text; ?></span>
+											</h2>
+											<div class="slider-mover">
+												<div class="img-big">
+													<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/ipad-wireframe.svg">
+													<div class="img-small ipad">
+														<div class="background-img" 
+															style="background-image: url('<?php echo $image_preview; ?>')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>	
+									</div>
+									<!--End ipad -->
+								<?php endif; ?>
+
+								<?php if($pro_select == 3): ?>
+									<!-- Macbook -->
+									<div class="slider" id="slider-<?php echo $pro_2; ?>">
+										<div class="container my-macbook">
+											<h2 class="title">
+											 	<?php echo $title; ?>
+											 	<span><?php echo $text; ?></span>
+											</h2>
+											<div class="slider-mover">
+												<div class="img-big">
+													<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/macbook-wireframe.svg">
+													<div class="img-small macbook">
+														<div class="background-img" 
+															style="background-image: url('<?php echo $image_preview; ?>')">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>	
+									</div>
+									<!--End Macbook -->
+								<?php endif; ?>
+
+							<?php endwhile; ?>
+						<?php endif; ?>
 					</div>
-					<!-- End Slider -->
+				</div>
+				<!-- End Slider -->
+
 				<div class="wrap">
 					
 					<h1><?php the_field('title_p5'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></h1>

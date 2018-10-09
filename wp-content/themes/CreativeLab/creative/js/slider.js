@@ -1,13 +1,16 @@
 $(function() {
 	var i = 1;
-	var n = 2;
+	var n = pro;
 	var curent = n;
 	var near = i + 1;
 	var flag = false;
+	var click = false;
+	console.log(pro);
 	if(n > 1) {
 		if(n === 2) {
 			$('#previous').click(function(){
 				if(!flag){
+					click = true;
 					flag = true;
 					var t = i;
 					i = curent;
@@ -33,6 +36,7 @@ $(function() {
 			//Click Next button
 			$('#next').click(function(){
 				if(!flag2){
+					click = true;
 					flag2 = true;
 					var t = i;
 					i = curent;
@@ -58,6 +62,7 @@ $(function() {
 			//Click Previous button
 			$('#previous').click(function(){
 				if(!flag){
+					click = true;
 					flag = true;
 					curent = i;
 					
@@ -92,6 +97,7 @@ $(function() {
 			//Click Next button
 			$('#next').click(function(){
 				if(!flag2){
+					click = true;
 					flag2 = true;
 					curent = i;
 					
@@ -125,6 +131,7 @@ $(function() {
 	
 	//Click Search button
 	$('#zoom-detail').click(function(){
+		click = false;
 		$('.slide .zoom-in').removeClass('zoom-in');
 		$('#slider-' + i).prop('class','slider');
 		$('#slider-' + i).addClass('zoom-in');
@@ -132,7 +139,7 @@ $(function() {
 		setTimeout(function(){
 			$('#content-' + i).addClass('show');
 			$('#content-' + i).css('visibility', 'visible');
-		}, 0.5*1000);
+		}, 0.4 * 1000);
 	});
 
 	//Click Close button
@@ -143,6 +150,15 @@ $(function() {
 		setTimeout(function(){
 			$('#slider-' + i).removeClass('zoom-in');
 			$('#content-' + i).css('visibility', 'hidden');
-		}, 0.5 * 1000);
+		}, 0.3 * 1000);
 	});
+
+	//Scroll
+	$(document).scroll(function(){
+		if(click){
+			$('.slider').prop('class','slider');
+			click = false;
+		}
+	});
+
 });
