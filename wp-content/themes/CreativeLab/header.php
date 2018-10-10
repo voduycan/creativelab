@@ -67,6 +67,31 @@
 		#label-send::before{
 			content: "<?php the_field('send'.$_SESSION["lan"], get_field('contact',$post->ID)); ?>";
 		}
+
+		#section1 {
+			background: url(<?php the_field('p1_desktop'.$_SESSION["lan"], get_field('intro',$post->ID)); ?>);
+		}
+		
+		#section2 {
+			background: url(<?php the_field('p2_desktop'.$_SESSION["lan"], get_field('who_is_creative_lab',$post->ID)); ?>);
+		}
+		#section3 {
+			background: url(<?php the_field('p3_desktop'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?>);
+		}
+		#section4 {
+			background: url(<?php the_field('p4_desktop'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?>);
+		}
+		#section5 {
+			background: url(<?php the_field('p5_desktop'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?>);
+		}
+		@media only screen and (max-width: 768px) {
+			#section1{ background: url(<?php the_field('p1_mobile'.$_SESSION["lan"], get_field('intro',$post->ID)); ?>); }
+			#section2{ background: url(<?php the_field('p2_mobile'.$_SESSION["lan"], get_field('who_is_creative_lab',$post->ID)); ?>); }
+			#section3{ background: url(<?php the_field('p3_mobile'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?>); }
+			#section4{ background: url(<?php the_field('p4_mobile'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?>); }
+			#section5{ background: url(<?php the_field('p5_mobile'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?>); }
+		}
+
 	</style>
 
 	<!-- <link href="less/main.css" rel="stylesheet"> -->

@@ -574,11 +574,23 @@ function my_acf_admin_head() {
     	#dc-form-en, #dc-form-jp{
     		display: none;
     	}
+
     </style>
     <?php
 }
 
 add_action('acf/input/admin_head', 'my_acf_admin_head');
+
+add_action('admin_head', 'my_custom_fonts');
+
+function my_custom_fonts() {
+  echo '<style>
+    .fixed .column-author, .fixed .column-date, .fixed .column-format, .fixed .column-links, .fixed .column-parent, .fixed .column-posts {
+    	width: 15%;
+	}
+  </style>';
+}
+
 /**
  * Implement the Custom Header feature.
  */

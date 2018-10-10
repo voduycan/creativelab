@@ -179,45 +179,50 @@
 		
 
 		<script> var pro = 0;</script>
-		<!-- Content detail -->
-		<?php if( have_rows('pro_product'.$_SESSION["lan"], get_field('featured_works',$post->ID))): $pro_p = 0;  ?>
+		
+		<?php 
+		if( have_rows('product_flexible'.$_SESSION["lan"], get_field('featured_works',$post->ID) )): $pro_p = 0; 
+			while ( have_rows('product_flexible'.$_SESSION["lan"], get_field('featured_works',$post->ID)) ) : the_row();
+			 	if( get_row_layout() == 'add_product' ):
+				 	
+				 	$image_content = get_sub_field('image_content'.$_SESSION["lan"]);
+				 	$title = get_sub_field('title'.$_SESSION["lan"]);
+				 	$sub_title = get_sub_field('sub_title'.$_SESSION["lan"]);
+				 	$product_detail = get_sub_field('product_detail'.$_SESSION["lan"]);
+				 	$product_scope = get_sub_field('product_scope'.$_SESSION["lan"]);
+				 	$pro_p++;
 
-			<?php while( have_rows('pro_product'.$_SESSION["lan"], get_field('featured_works',$post->ID)) ): the_row(); 
+		?>
+					<script> pro++; </script>
 
-				// vars
-				$image_content = get_sub_field('pro_image_content'.$_SESSION["lan"]);
-				$title = get_sub_field('pro_title'.$_SESSION["lan"]);
-				$text = get_sub_field('pro_text'.$_SESSION["lan"]);
-				$detail = get_sub_field('pro_detail'.$_SESSION["lan"]);
-				$scope = get_sub_field('pro_scope'.$_SESSION["lan"]);
-				$pro_p++;
-
-			?>
-			<script> pro++; </script>
-
-				<div class="content-open" id="content-<?php echo $pro_p; ?>">
-					<div class="product-zoom-slider">
-						<div class="image-left">
-							<img src="<?php echo $image_content; ?>">
-						</div>
-						<div class="detail">
-							<h2><?php echo $title; ?></h2>
-							<h3><?php echo $text; ?></h3>
-							<div class="content-detail">
-								<p><?php echo $detail; ?></p>
-								<div class="description">
-									<span class="icon-project-management"></span>
-									<p class="content"><?php echo $scope; ?></p>
-								</div>
+					<div class="content-open" id="content-<?php echo $pro_p; ?>">
+						<div class="product-zoom-slider">
+							<div class="image-left">
+								<img src="<?php echo $image_content; ?>">
 							</div>
-							<a class="button primary btn-close-slide" data-text="<?php the_field('pro_button_close'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?>">
-								<span><?php the_field('pro_button_close'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span>
-							</a>
+							<div class="detail">
+								<h2><?php echo $title; ?></h2>
+								<h3><?php echo $sub_title; ?></h3>
+								<div class="content-detail">
+									<?php echo $product_detail; ?>
+									<div class="description">
+										<span class="icon-project-management"></span>
+										<?php echo $product_scope; ?>
+									</div>
+								</div>
+								<a class="button primary btn-close-slide" data-text="<?php the_field('pro_button_close'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?>">
+									<span><?php the_field('pro_button_close'.$_SESSION["lan"], get_field('featured_works',$post->ID)); ?></span>
+								</a>
+							</div>
 						</div>
 					</div>
-				</div>
+				<?php endif; ?>
 			<?php endwhile; ?>
 		<?php endif; ?>
+
+
+
+
 
 		<!-- End Content detail -->
 		
@@ -237,7 +242,7 @@
 
 			<!-- Intro -->
 			<section id="section1" data-stellar-background-ratio="0.3">
-				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section1.png" alt="" data-stellar-ratio="0.8">
+				<img src="<?php the_field('p1_parallax'.$_SESSION["lan"], get_field('intro',$post->ID)); ?>" alt="" data-stellar-ratio="0.8">
 				
 				<div class="wrap">
 					
@@ -255,7 +260,7 @@
 			
 			<!-- Who We Are -->	
 			<section id="section2" data-stellar-background-ratio="0.3">
-				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section2.png" alt="" data-stellar-ratio="0.8">
+				<img src="<?php the_field('p2_parallax'.$_SESSION["lan"], get_field('who_is_creative_lab',$post->ID)); ?>" alt="" data-stellar-ratio="0.8">
 				
 				<div class="wrap">
 					
@@ -275,7 +280,7 @@
 			
 			<!-- Our Services -->	
 			<section id="section3" data-stellar-background-ratio="0.3">
-				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section3.png" alt="" data-stellar-ratio="0.8">
+				<img src="<?php the_field('p3_parallax'.$_SESSION["lan"], get_field('our_services',$post->ID)); ?>" alt="" data-stellar-ratio="0.8">
 				
 				<div class="wrap">
 					
@@ -298,97 +303,97 @@
 				<div class="slide" data-stellar-ratio="0.8">
 					
 					<div class="product-slider">
-						
-						<?php if( have_rows('pro_product'.$_SESSION["lan"], get_field('featured_works',$post->ID))): $pro_2 = 0;  ?>
 
-						<!-- Slider controller -->
-						<div class="slider-nav">
-							<span class="icon-arrow reverse" id="previous"></span>
-							<span class="icon-magnifier" id="zoom-detail"></span>
-							<span class="icon-arrow" id="next"></span>
-						</div>
-						<!--End Slider controller -->
+						<?php 
+						if( have_rows('product_flexible'.$_SESSION["lan"], get_field('featured_works',$post->ID) )): $pro_2 = 0;?>
+							<!-- Slider controller -->
+							<div class="slider-nav">
+								<span class="icon-arrow reverse" id="previous"></span>
+								<span class="icon-magnifier" id="zoom-detail"></span>
+								<span class="icon-arrow" id="next"></span>
+							</div>
+							<!--End Slider controller -->
+							<?php
+							while ( have_rows('product_flexible'.$_SESSION["lan"], get_field('featured_works',$post->ID)) ) : the_row();
+							 	if( get_row_layout() == 'add_product' ):
 
-							<?php while( have_rows('pro_product'.$_SESSION["lan"], get_field('featured_works',$post->ID)) ): the_row(); 
-
-								// vars
-								$image_preview = get_sub_field('pro_image_preview'.$_SESSION["lan"]);
-								$title = get_sub_field('pro_title'.$_SESSION["lan"]);
-								$text = get_sub_field('pro_text'.$_SESSION["lan"]);
-								$pro_select = get_sub_field('pro_select'.$_SESSION["lan"]);
-								$pro_2++;
+								 	$imge_preview = get_sub_field('imge_preview'.$_SESSION["lan"]);
+								 	$title = get_sub_field('title'.$_SESSION["lan"]);
+								 	$sub_title = get_sub_field('sub_title'.$_SESSION["lan"]);
+								 	$device_thumbnail = get_sub_field('device_thumbnail'.$_SESSION["lan"]);
+								 	$pro_2++;
 							?>
-								<?php if($pro_select == 1): ?>
-									<!-- Iphone -->
-									<div class="slider" id="slider-<?php echo $pro_2; ?>">
-										<div class="container my-iphone">
-											<h2 class="title">
-											 	<?php echo $title; ?>
-											 	<span><?php echo $text; ?></span>
-											</h2>
-											<div class="slider-mover">
-												<div class="img-big">
-													<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
-													<div class="img-small iphone">
-														<div class="background-img" 
-															style="background-image: url('<?php echo $image_preview; ?>')">
+									<?php if($device_thumbnail == 1): ?>
+										<!-- Iphone -->
+										<div class="slider" id="slider-<?php echo $pro_2; ?>">
+											<div class="container my-iphone">
+												<h2 class="title">
+												 	<?php echo $title; ?>
+												 	<span><?php echo $sub_title; ?></span>
+												</h2>
+												<div class="slider-mover">
+													<div class="img-big">
+														<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/iphone-wirefame.svg">
+														<div class="img-small iphone">
+															<div class="background-img" 
+																style="background-image: url('<?php echo $imge_preview; ?>')">
+															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-										</div>	
-									</div>
-									<!--End Iphone -->
-								<?php endif; ?>
+											</div>	
+										</div>
+										<!--End Iphone -->
+									<?php endif; ?>
 
-								<?php if($pro_select == 2): ?>
-									<!-- Ipad -->
-									<div class="slider" id="slider-<?php echo $pro_2; ?>">
-										<div class="container my-ipad">
-											<h2 class="title">
-											 	<?php echo $title; ?>
-											 	<span><?php echo $text; ?></span>
-											</h2>
-											<div class="slider-mover">
-												<div class="img-big">
-													<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/ipad-wireframe.svg">
-													<div class="img-small ipad">
-														<div class="background-img" 
-															style="background-image: url('<?php echo $image_preview; ?>')">
+									<?php if($device_thumbnail == 2): ?>
+										<!-- Ipad -->
+										<div class="slider" id="slider-<?php echo $pro_2; ?>">
+											<div class="container my-ipad">
+												<h2 class="title">
+												 	<?php echo $title; ?>
+												 	<span><?php echo $sub_title; ?></span>
+												</h2>
+												<div class="slider-mover">
+													<div class="img-big">
+														<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/ipad-wireframe.svg">
+														<div class="img-small ipad">
+															<div class="background-img" 
+																style="background-image: url('<?php echo $imge_preview; ?>')">
+															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-										</div>	
-									</div>
-									<!--End ipad -->
-								<?php endif; ?>
+											</div>	
+										</div>
+										<!--End ipad -->
+									<?php endif; ?>
 
-								<?php if($pro_select == 3): ?>
-									<!-- Macbook -->
-									<div class="slider" id="slider-<?php echo $pro_2; ?>">
-										<div class="container my-macbook">
-											<h2 class="title">
-											 	<?php echo $title; ?>
-											 	<span><?php echo $text; ?></span>
-											</h2>
-											<div class="slider-mover">
-												<div class="img-big">
-													<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/macbook-wireframe.svg">
-													<div class="img-small macbook">
-														<div class="background-img" 
-															style="background-image: url('<?php echo $image_preview; ?>')">
+									<?php if($device_thumbnail == 3): ?>
+										<!-- Macbook -->
+										<div class="slider" id="slider-<?php echo $pro_2; ?>">
+											<div class="container my-macbook">
+												<h2 class="title">
+												 	<?php echo $title; ?>
+												 	<span><?php echo $sub_title; ?></span>
+												</h2>
+												<div class="slider-mover">
+													<div class="img-big">
+														<img src="<?php bloginfo('template_url'); ?>/creative/images/svg/macbook-wireframe.svg">
+														<div class="img-small macbook">
+															<div class="background-img" 
+																style="background-image: url('<?php echo $imge_preview; ?>')">
+															</div>
 														</div>
 													</div>
 												</div>
-											</div>
-										</div>	
-									</div>
-									<!--End Macbook -->
+											</div>	
+										</div>
+										<!--End Macbook -->
+									<?php endif; ?>
 								<?php endif; ?>
-
 							<?php endwhile; ?>
-						<?php endif; ?>
+						<?php endif; ?> 
 					</div>
 				</div>
 				<!-- End Slider -->
@@ -411,7 +416,7 @@
 
 			<!-- Why Choose Us -->	
 			<section id="section5" data-stellar-background-ratio="0.3">
-				<img src="<?php bloginfo('template_url'); ?>/creative/images/png/element-section5.png" alt="" data-stellar-ratio="0.8">
+				<img src="<?php the_field('p5_parallax'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?>" alt="" data-stellar-ratio="0.8">
 				<div class="wrap">
 					
 					<h1><?php the_field('title_p4'.$_SESSION["lan"], get_field('why_choose_us',$post->ID)); ?></h1>

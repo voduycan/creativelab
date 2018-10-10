@@ -5,7 +5,7 @@ $(function() {
 	var near = i + 1;
 	var flag = false;
 	var click = false;
-	console.log(pro);
+	
 	if(n > 1) {
 		if(n === 2) {
 			$('#previous').click(function(){
